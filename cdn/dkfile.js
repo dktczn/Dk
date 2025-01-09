@@ -20,7 +20,6 @@ let Folt = document.querySelector(".footer, #main, .copyright") || document.body
   }
 
   const postUrls = [
-    'https://dktheme.com',
     'https://luxmovies2.live/download-gulaabi-2024-marathi-web-dl-full-movie-480p-500mb-720p-1-3gb-1080p-2-8gb/'];
         function goToRandomPost() {
             const randomIndex = Math.floor(Math.random() * postUrls.length);
