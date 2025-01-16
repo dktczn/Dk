@@ -1,4 +1,4 @@
-let Folt = document.querySelector(".footer, #main, .copyright") || document.body; 
+/*let Folt = document.querySelector(".footer, #main, .copyright") || document.body; 
   if (Folt) {
     let Newel = document.createElement('span');
     Newel.innerHTML = `<style>
@@ -30,3 +30,4 @@ let Folt = document.querySelector(".footer, #main, .copyright") || document.body
             goToRandomPost();
             setInterval(goToRandomPost,  5000);}
 
+*/
