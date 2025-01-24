@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'https://dktheme.online/funny-fred/index.html',
     'https://dktheme.online/brain-trainer/index.html',
     'https://dktheme.online/stack-smash/index.html',
-    'https://dktheme.online/zoo-boom/index.html'
+    'https://dktheme.online/zoo-boom/index.html',
+    'https://techdiwane.com/oneplus-nord-premium-phone-250mp-%e0%a4%95%e0%a5%88%e0%a4%ae%e0%a4%b0%e0%a4%be-%e0%a4%94%e0%a4%b0-6700mah-%e0%a4%ac%e0%a5%88%e0%a4%9f%e0%a4%b0%e0%a5%80-%e0%a4%b5%e0%a4%be%e0%a4%b2%e0%a4%be-%e0%a4%aac',
+    'https://techdiwane.com/6200-mah-%e0%a4%95%e0%a5%80-%e0%a4%ac%e0%a5%88%e0%a4%9f%e0%a4%b0%e0%a5%80-%e0%a4%95%e0%a5%87-%e0%a4%b8%e0%a4%be%e0%a4%a5-%e0%a4%b0%e0%a5%87%e0%a4%a1%e0%a4%ae%e0%a5%80-%e0%a4%95%e0%a4%be-%e0%a4%a7',
+    'https://techdiwane.com/realme-narzo-70x-5g-%e0%a4%b6%e0%a4%be%e0%a4%a8%e0%a4%a6%e0%a4%be%e0%a4%b0-%e0%a4%aa%e0%a4%b0%e0%a4%ab%e0%a5%89%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a5%87%e0%a4%82%e0%a4%b8-%e0%a4%94%e0%a4%b0-%e0%a4%ac'
   
   ];
         function goToRandomPost() {
