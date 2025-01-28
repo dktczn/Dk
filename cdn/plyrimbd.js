@@ -1,25 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const mainElement = document.querySelector("#main"); // #main element ko select karein
 
-    // HTML structure to append
-    const htmlContent = `
-        <!-- IMDb Link -->
-        <a href="https://www.imdb.com/title/tt1234567/">Check IMDb Link</a>
-
-        <!-- Player Container -->
-        <div id="IndStreamPlayer" class="iframe-container"></div>
-    `;
-
-    // Append HTML under #main
-    if (mainElement) {
-        mainElement.insertAdjacentHTML("beforeend", htmlContent);
-
-        // IMDb logic
         const allLinks = document.querySelectorAll('a[href*="imdb.com/title/"]');
         const iframeContainer = document.querySelector("#IndStreamPlayer");
 
         if (allLinks.length > 0) {
-            const imdbUrl = allLinks[0].href; // Sirf pehla IMDb link consider karein
+          const imdbUrl = allLinks[0].href; // Sirf pehla IMDb link consider karein
             const imdbTitleMatch = imdbUrl.match(/title\/(tt\d+)/);
 
             if (imdbTitleMatch && imdbTitleMatch[1]) {
@@ -44,4 +30,5 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error("Main element (#main) not found in the document.");
     }
+mainElement.appendChild(iframeContainer);
 });
