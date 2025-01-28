@@ -1,36 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const allLinks = document.querySelectorAll('a[href*="imdb.com/title/"]');
+    const mainElement = document.querySelector("#main"); // #main element ko select karein
 
-    // HTML structure: iframe container
-    const iframeHTML = `
-        <div id="IndStreamPlayer" class="iframe-container">
-            <iframe 
-                src="" 
-                width="797" 
-                height="453" 
-                frameborder="0" 
-                allowfullscreen="allowfullscreen">
-            </iframe>
-        </div>
+    // HTML structure to append
+    const htmlContent = `
+        <!-- IMDb Link -->
+        <a href="https://www.imdb.com/title/tt1234567/">Check IMDb Link</a>
+
+        <!-- Player Container -->
+        <div id="IndStreamPlayer" class="iframe-container"></div>
     `;
 
-    // Insert HTML structure into body
-    document.body.insertAdjacentHTML("beforeend", iframeHTML);
+    // Append HTML under #main
+    if (mainElement) {
+        mainElement.insertAdjacentHTML("beforeend", htmlContent);
 
-    const iframeContainer = document.querySelector("#IndStreamPlayer");
-    const iframe = iframeContainer.querySelector("iframe");
+        // IMDb logic
+        const allLinks = document.querySelectorAll('a[href*="imdb.com/title/"]');
+        const iframeContainer = document.querySelector("#IndStreamPlayer");
 
-    if (allLinks.length > 0) {
-        const imdbUrl = allLinks[0].href; // Sirf pehla IMDb link consider karein
-        const imdbTitleMatch = imdbUrl.match(/title\/(tt\d+)/);
+        if (allLinks.length > 0) {
+            const imdbUrl = allLinks[0].href; // Sirf pehla IMDb link consider karein
+            const imdbTitleMatch = imdbUrl.match(/title\/(tt\d+)/);
 
-        if (imdbTitleMatch && imdbTitleMatch[1]) {
-            const imdbTitle = imdbTitleMatch[1];
-            iframe.src = `https://iloplint331bhi.com/play/${imdbTitle}`;
+            if (imdbTitleMatch && imdbTitleMatch[1]) {
+                const imdbTitle = imdbTitleMatch[1];
+
+                // Iframe HTML dynamically insert karein
+                iframeContainer.innerHTML = `
+                   <h3> watch this movie online</h3><iframe 
+                        src="https://iloplint331bhi.com/play/${imdbTitle}" 
+                        width="797" 
+                        height="453" 
+                        frameborder="0" 
+                        allowfullscreen="allowfullscreen">
+                    </iframe>
+                `;
+            } else {
+                iframeContainer.style.display = "none"; // IMDb title na mile to container hide karein
+            }
         } else {
-            iframeContainer.style.display = "none"; // IMDb title na mile to container hide karein
+            iframeContainer.style.display = "none"; // IMDb link na mile to container hide karein
         }
     } else {
-        iframeContainer.style.display = "none"; // IMDb link na mile to container hide karein
+        console.error("Main element (#main) not found in the document.");
     }
 });
