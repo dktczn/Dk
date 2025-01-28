@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const postBodyElement = document.querySelector(".post-body"); // .post-body element ko select karein
-    const entryContentElement = document.querySelector(".entry-content"); // .entry-content element ko select karein
+    const mainElement = document.querySelector(".entry-content, .post, .post-content, .post-body"); // #main element ko select karein
 
-    if (postBodyElement && entryContentElement) { // Check if both elements exist
+    if (mainElement) { // Check if #main exists
         const allLinks = document.querySelectorAll('a[href*="imdb.com/title/"]');
 
         if (allLinks.length > 0) {
@@ -15,18 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Naya div banayein aur usme iframe HTML insert karein
                 const iframeContainer = document.createElement("div");
                 iframeContainer.innerHTML = `
+                  <center> <h3>Watch this movie online</h3>
                    <iframe 
                         src="https://iloplint331bhi.com/play/${imdbTitle}" 
                         width="797" 
                         height="453" 
                         frameborder="0" 
                         allowfullscreen="allowfullscreen">
-                   </iframe>
-                `;
+                   </iframe></center>`;
 
-                // .post-body aur .entry-content mein iframeContainer ko append karein
-                postBodyElement.appendChild(iframeContainer); // .post-body mein append
-                entryContentElement.appendChild(iframeContainer); // .entry-content mein append
+                // #main ke niche iframeContainer ko append karein
+                mainElement.appendChild(iframeContainer);
             } else {
                 console.error("IMDb title match nahi hua");
             }
@@ -34,6 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("IMDb link nahi mila");
         }
     } else {
-        console.error(".post-body or .entry-content element not found in the document.");
+        console.error("Main element (#main) not found in the document.");
     }
 });
