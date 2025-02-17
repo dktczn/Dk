@@ -9,13 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
         iframeContainer.id = "IndStreamPlayer";
         iframeContainer.className = "iframe-container";
 
-        const mainContainer = document.querySelector(".post .post-body #main");
+        const mainContainer = document.querySelector(".entry-content .post-published .post-body #main .post #content");
         if (mainContainer) {
             mainContainer.insertAdjacentElement("afterend", iframeContainer);
             appendedTo = mainContainer;
         } else {
-            document.body.appendChild(iframeContainer); // Agar #main na mile to body me add
-            appendedTo = document.body;
+            
         }
 
         console.log("✅ Iframe container appended to:", appendedTo);
