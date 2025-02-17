@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const allLinks = document.querySelectorAll('a[href*="imdb.com/title/"]');
     let iframeContainer = document.querySelector("#IndStreamPlayer");
+    let appendedTo = null; // Log ke liye variable
 
     // Agar iframe container nahi milta to naye div ko append karenge
     if (!iframeContainer) {
@@ -8,12 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
         iframeContainer.id = "IndStreamPlayer";
         iframeContainer.className = "iframe-container";
 
-        const mainContainer = document.querySelector(".entry-content .post .post-body #main");
+        const mainContainer = document.querySelector(".post .post-body #main");
         if (mainContainer) {
             mainContainer.insertAdjacentElement("afterend", iframeContainer);
+            appendedTo = mainContainer;
         } else {
             document.body.appendChild(iframeContainer); // Agar #main na mile to body me add
+            appendedTo = document.body;
         }
+
+        console.log("✅ Iframe container appended to:", appendedTo);
     }
 
     // Responsive Wrapper
@@ -39,10 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const imdbTitle = imdbTitleMatch[1];
             iframe.src = `https://iloplint331bhi.com/play/${imdbTitle}`;
             iframeContainer.appendChild(iframe);
+            console.log("🎬 Iframe src set to:", iframe.src);
         } else {
             iframeContainer.style.display = "none";
+            console.log("❌ IMDb ID not found, hiding iframe container.");
         }
     } else {
         iframeContainer.style.display = "none";
+        console.log("❌ No IMDb link found, hiding iframe container.");
     }
 });
