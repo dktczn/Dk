@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const mainElement = document.querySelector(".entry-content, .post, .post-content, .post-body, #main, #content, .dwd-btn");
+    const mainElement = document.querySelector(".entry-content, .post, .post-content, .post-body, .dwd-btn");
 
     if (mainElement) {
         const allLinks = document.querySelectorAll('a[href*="imdb.com/title/"]');
