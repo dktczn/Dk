@@ -1,0 +1,88 @@
+
+header,footer{display:none;}
+html {
+    scroll-behavior: smooth;
+}	
+	
+	.pstinr{padding:15px;
+	max-width:900px;margin:20px auto;
+font-size:14px;}p.btndiv{ display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 11px;
+}
+.alert-info{ color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb;}
+.alert-success{color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;}
+.alert{    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5%;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;}
+.btndiv button{ min-width: 280px;
+    margin: 6px !important;
+	font-size: 16px !important;
+	font-weight:600;
+	font-style:sans-serif;
+	padding: 12px;border:none;
+ border-radius: 15% !important; background:linear-gradient(135deg,#0ebac3,#09d261); 
+}
+
+.divdr{padding: 5px 120px 0 150px; background: #797d84; border-radius: 50%; margin-top: 30px;}
+
+
+
+.btndiv a:nth-child(1) .btn1 {
+   background:linear-gradient(135deg,#0ebac3,#09d261); color: white;
+}
+.btndiv a:nth-child(2) .btn1 {
+ background:linear-gradient(135deg,#ed0b0b,#f2d152); color: white;
+}
+.btndiv a:nth-child(3) .btn1 {
+   background:linear-gradient(135deg,rgb(252,185,0) 0%,rgb(0,0,0)); color: #fdf8f2;
+}
+.btndiv a:nth-child(4) .btn1 {
+   background: linear-gradient(135deg,#2ea1cf,#ff19d0); color: white;
+}
+.btndiv a:nth-child(5) .btn1 {
+  background: linear-gradient(135deg,#045872d1,#ff6380ba); color: white;
+}
+
+
+.btndiv a:nth-child(6) .btn1 {
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+.btndiv a:nth-child(7) .btn1 {
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+.btndiv a:nth-child(8) .btn1 {
+    background: red;
+    color: white;
+}
+.btndiv a:nth-child(9) .btn1 {
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+.btndiv a:nth-child(10) .btn1 {
+    background-image: linear-gradient(44deg, #30cfd0 0%, #330867 100%);
+}
+.btndiv a:nth-child(11) .btn1 {
+    background-image: radial-gradient(orange, greenyellow);
+}
+.btndiv a:nth-child(12) .btn1 {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+button.btn.btn-sm.series.btn1{
+    background: linear-gradient(45deg, #000000, #ff0101);
+    min-width: 250px;
+    border: none;
+    border-radius: 15%;
+    text-transform: uppercase;
+	font-weight: 600;}
+.pstinr h1,.pstinr h2,.pstinr h3,.pstinr h4,.pstinr h5{text-transform:capitalize;font-weight:600;}
