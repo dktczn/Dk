@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (Folt) {
     let Newel = document.createElement('span');
     Newel.innerHTML = `<a class="btc" href="https://dktechnozone.shop/">Dk Technozone web developer</a>
+   <a class="btc" href="https://techdiwane.com/">Tech diwane</a> 
+   <a class="btc" href="https://dktheme.com/">dktheme</a>
  <style>.btc{
      color: black;text-decoration: none;
      opacity: 0; display:inline;
