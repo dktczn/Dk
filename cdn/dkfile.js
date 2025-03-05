@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let Folt = document.querySelector(".footer, #main, .copyright");
   if (Folt) {
     let Newel = document.createElement('span');
-    Newel.innerHTML = `<a class="btc" href="https://www.dktechnozone.in/">This Website Design By Dk Technozone</a>
+    Newel.innerHTML = `<a class="btc" href="https://dktechnozone.shop/">Dk Technozone web developer</a>
  <style>.btc{
      color: black;text-decoration: none;
      opacity: 0; display:inline;
