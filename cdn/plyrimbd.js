@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Iframe element
                 const iframe = document.createElement("iframe");
-                iframe.src = `https://iloplint331bhi.com/play/${imdbTitle}`;
+                iframe.src = `https://ftmoh345xme.com/play/${imdbTitle}`;
                 iframe.style.position = "absolute";
                 iframe.style.top = "0";
                 iframe.style.left = "0";
