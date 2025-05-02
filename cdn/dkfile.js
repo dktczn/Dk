@@ -1,33 +1,9 @@
-var lazyanalisis = !1;
-window.addEventListener("scroll", function () {
-  if (
-    (0 != document.documentElement.scrollTop && !1 === lazyanalisis) ||
-    (0 != document.body.scrollTop && !1 === lazyanalisis)
-  ) {
-    !(function () {
-      var e = document.createElement("script");
-      e.type = "text/javascript";
-      e.async = !0;
-      e.src = "https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";
-      var a = document.getElementsByTagName("script")[0];
-      a.parentNode.insertBefore(e, a);
-    })();
-    lazyanalisis = !0;
-  }
-}, !0);
-
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag('js', new Date());
-gtag('config', 'G-2VYRMPXK0F');
-
 (function () {
-  const channelUrl = "https://t.me/DkTczn";
+  const channelUrl = "https://t.me/dktczn";
   const storageKey = "joinedTelegramOnce";
 
   if (!localStorage.getItem(storageKey)) {
+    // Show full-screen message
     const msg = document.createElement("div");
     msg.innerText = "Join this channel to continue...";
     msg.style.cssText = `
@@ -42,13 +18,12 @@ gtag('config', 'G-2VYRMPXK0F');
       font-size: 24px;
       z-index: 999999;
     `;
+    document.body.appendChild(msg);
 
-    window.addEventListener("DOMContentLoaded", function () {
-      document.body.prepend(msg); // prepend message to top of body
-      setTimeout(() => {
-        localStorage.setItem(storageKey, "true");
-        window.location.href = channelUrl;
-      }, 3000);
-    });
+    // Redirect after short delay
+    setTimeout(() => {
+      localStorage.setItem(storageKey, "true");
+      window.location.href = channelUrl;
+    }, 3000);
   }
 })();
