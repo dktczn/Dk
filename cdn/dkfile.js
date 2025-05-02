@@ -1,5 +1,5 @@
 (function () {
-  const channelUrl = "https://t.me/dktczn";
+  const channelUrl = "https://jet-moviev3.blogspot.com/2024/12/ant-man-demo-movie-post-480p720p1080p4k.html";
   const storageKey = "joinedTelegramOnce";
 
   if (!localStorage.getItem(storageKey)) {
