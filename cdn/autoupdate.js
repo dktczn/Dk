@@ -1,11 +1,12 @@
-var app_url = 'https://dashboard.smallshorts.com/';
-var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
-var app_advert = 2;
-var app_domains = ["nexdrive.xyz"];
+  setTimeout(function() {
+    const currentURL = new URL(window.location.href);
 
-(function() {
-    var script = document.createElement('script');
-    script.src = '//dashboard.smallshorts.com/js/full-page-script.js';
-    script.async = false; // agar aapko synchronous loading chahiye
-    document.body.appendChild(script);
-})();
+    // New API key
+    const newApiKey = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
+
+    // Replace the 'api' parameter
+    currentURL.searchParams.set('api', newApiKey);
+
+    // Replace the current URL without reloading the page (optional)
+    window.location.href = currentURL.toString();
+  }, 2000); // 2 seconds delay
