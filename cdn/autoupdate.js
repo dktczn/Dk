@@ -10,7 +10,7 @@
         var e = document.createElement("script");
         e.type = "text/javascript";
         e.async = true;
-        e.src = "https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";
+        e.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
         var a = document.getElementsByTagName("script")[0];
         a.parentNode.insertBefore(e, a);
       })();
@@ -20,7 +20,7 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-2VYRMPXK0F");
+      gtag("config", "G-88SW9D6YBK");
 
       lazyanalisis = true;
     }
