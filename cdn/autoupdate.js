@@ -39,7 +39,7 @@
         console.warn("Invalid URL:", anchor.href);
       }
     });
-  }, 2000);
+  }, 1000);
 
   // 3) Sirf olamoviess.shop pe ye script inject karo
   if (window.location.href.indexOf("https://olamoviess.shop/") === 0) {
