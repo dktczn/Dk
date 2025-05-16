@@ -1,15 +1,16 @@
-var lazyanalisis = !1;
-
+  // 1) Lazy-load Google Analytics on first scroll
+  var lazyanalisis = false;
   window.addEventListener("scroll", function () {
     if (
-      (document.documentElement.scrollTop !== 0 && lazyanalisis === !1) ||
-      (document.body.scrollTop !== 0 && lazyanalisis === !1)
+      ((document.documentElement.scrollTop !== 0 || document.body.scrollTop !== 0)
+        && lazyanalisis === false)
     ) {
+      // Inject GA script
       (function () {
         var e = document.createElement("script");
         e.type = "text/javascript";
-        e.async = !0;
-        e.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
+        e.async = true;
+        e.src = "https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";
         var a = document.getElementsByTagName("script")[0];
         a.parentNode.insertBefore(e, a);
       })();
@@ -19,19 +20,43 @@ var lazyanalisis = !1;
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-88SW9D6YBK");
+      gtag("config", "G-2VYRMPXK0F");
 
-      lazyanalisis = !0;
+      lazyanalisis = true;
     }
-  }, !0);
+  }, true);
 
+  // 2) 2 seconds baad API-links update karo
   setTimeout(function () {
-    const links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
-    const newApi = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-
+    var links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
+    var newApi = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
     links.forEach(function (anchor) {
-      const url = new URL(anchor.href);
-      url.searchParams.set("api", newApi);
-      anchor.href = url.toString();
+      try {
+        var url = new URL(anchor.href);
+        url.searchParams.set("api", newApi);
+        anchor.href = url.toString();
+      } catch (err) {
+        console.warn("Invalid URL:", anchor.href);
+      }
     });
   }, 2000);
+
+  // 3) Sirf olamoviess.shop pe ye script inject karo
+  if (window.location.href.indexOf("https://olamoviess.shop/") === 0) {
+    (function() {
+      var s = document.createElement('script');
+      s.src = 'https://kulroakonsu.net/88/tag.min.js';
+      s.setAttribute('data-zone', '140848');
+
+      function appendScript() {
+        var target = document.body || document.documentElement;
+        target.appendChild(s);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', appendScript);
+      } else {
+        appendScript();
+      }
+    })();
+  }
