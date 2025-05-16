@@ -45,8 +45,8 @@
   if (window.location.href.indexOf("https://olamoviess.shop/") === 0) {
     (function() {
       var s = document.createElement('script');
-      s.src = 'https://kulroakonsu.net/88/tag.min.js';
-      s.setAttribute('data-zone', '140848');
+      s.src = 'https://al5sm.com/tag.min.js';
+      s.setAttribute('data-zone', '9173610');
 
       function appendScript() {
         var target = document.body || document.documentElement;
