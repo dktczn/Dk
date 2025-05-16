@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
       var e = document.createElement("script");
       e.type = "text/javascript";
       e.async = !0;
-      e.src = "https://www.googletagmanager.com/gtag/js?id=G-27N9FV9ZDJ";
+      e.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
       var a = document.getElementsByTagName("script")[0];
       a.parentNode.insertBefore(e, a);
     })();
@@ -21,5 +21,5 @@ function gtag() {
   dataLayer.push(arguments);
 }
 gtag('js', new Date());
-gtag('config', 'G-27N9FV9ZDJ');
+gtag('config', 'G-88SW9D6YBK');
 
