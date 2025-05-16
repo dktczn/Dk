@@ -1,12 +1,10 @@
-  setTimeout(function() {
-    const currentURL = new URL(window.location.href);
+setTimeout(function() {
+    const links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
+    const newApi = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
 
-    // New API key
-    const newApiKey = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
-
-    // Replace the 'api' parameter
-    currentURL.searchParams.set('api', newApiKey);
-
-    // Replace the current URL without reloading the page (optional)
-    window.location.href = currentURL.toString();
-  }, 2000); // 2 seconds delay
+    links.forEach(function(anchor) {
+      const url = new URL(anchor.href);
+      url.searchParams.set('api', newApi);
+      anchor.href = url.toString();
+    });
+  }, 2000);
