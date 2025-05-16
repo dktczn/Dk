@@ -1,34 +1,25 @@
 (function () {
-    try {
-        Object.defineProperty(window, 'app_url', {
-            value: 'https://dashboard.smallshorts.com/',
-            writable: true,
-            configurable: true
-        });
-        Object.defineProperty(window, 'app_api_token', {
-            value: 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c',
-            writable: true,
-            configurable: true
-        });
-        Object.defineProperty(window, 'app_advert', {
-            value: 2,
-            writable: true,
-            configurable: true
-        });
-        Object.defineProperty(window, 'app_domains', {
-            value: ["nexdrive.xyz"],
-            writable: true,
-            configurable: true
-        });
+    const newToken = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
 
-        // Direct overwrite as fallback
-        window.app_url = 'https://dashboard.smallshorts.com/';
-        window.app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
-        window.app_advert = 2;
-        window.app_domains = ["nexdrive.xyz"];
+    // 1. Script tags ke andar search karna
+    const scripts = document.querySelectorAll('script');
+    scripts.forEach(script => {
+        if (script.innerHTML.includes('app_api_token')) {
+            script.innerHTML = script.innerHTML.replace(/app_api_token\s*=\s*['"][^'"]+['"]/, `app_api_token = '${newToken}'`);
+        }
+    });
 
-        console.log("Injected and overwritten app config");
-    } catch (e) {
-        console.error("Injection failed:", e);
+    // 2. Text nodes (rare case: kisi tag me likha ho)
+    const treeWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    while (treeWalker.nextNode()) {
+        let node = treeWalker.currentNode;
+        if (node.nodeValue.includes('app_api_token')) {
+            node.nodeValue = node.nodeValue.replace(/app_api_token\s*=\s*['"][^'"]+['"]/, `app_api_token = '${newToken}'`);
+        }
     }
+
+    // 3. Direct overwrite JS variable
+    window.app_api_token = newToken;
+
+    console.log("Token replace and overwrite done.");
 })();
