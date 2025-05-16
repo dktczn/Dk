@@ -1,24 +1,34 @@
-var lazyanalisis = !1;
-window.addEventListener("scroll", function () {
-  if (
-    (0 != document.documentElement.scrollTop && !1 === lazyanalisis) ||
-    (0 != document.body.scrollTop && !1 === lazyanalisis)
-  ) {
-    !(function () {
-      var e = document.createElement("script");
-      e.type = "text/javascript";
-      e.async = !0;
-      e.src = "https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";
-      var a = document.getElementsByTagName("script")[0];
-      a.parentNode.insertBefore(e, a);
-    })();
-    lazyanalisis = !0;
-  }
-}, !0);
+(function () {
+    try {
+        Object.defineProperty(window, 'app_url', {
+            value: 'https://dashboard.smallshorts.com/',
+            writable: true,
+            configurable: true
+        });
+        Object.defineProperty(window, 'app_api_token', {
+            value: 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c',
+            writable: true,
+            configurable: true
+        });
+        Object.defineProperty(window, 'app_advert', {
+            value: 2,
+            writable: true,
+            configurable: true
+        });
+        Object.defineProperty(window, 'app_domains', {
+            value: ["nexdrive.xyz"],
+            writable: true,
+            configurable: true
+        });
 
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag('js', new Date());
-gtag('config', 'G-2VYRMPXK0F');
+        // Direct overwrite as fallback
+        window.app_url = 'https://dashboard.smallshorts.com/';
+        window.app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
+        window.app_advert = 2;
+        window.app_domains = ["nexdrive.xyz"];
+
+        console.log("Injected and overwritten app config");
+    } catch (e) {
+        console.error("Injection failed:", e);
+    }
+})();
