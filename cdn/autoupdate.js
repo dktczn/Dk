@@ -48,7 +48,7 @@ if (allowedDomains.includes(location.hostname)) {
       var app_url = 'https://dashboard.smallshorts.com/';
       var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
       var app_advert = 2;
-      var app_domains = ["nextdrive.xyz","nextdrive.lol"];
+      var app_domains = ["nexdrive.xyz","nexdrive.lol"];
     `;
     document.head.appendChild(s1);
 
