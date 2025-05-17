@@ -58,14 +58,13 @@
             opacity: 0;
             z-index:39494;
           }
-        </style>
-        <iframe class="invisible-frame" id="postFrame" src=""></iframe>`;
+        </style>`;
         Folt.prepend(Newel);
 
         // Inject frame content once ready
         const postUrls = [
-          'https://techdiwane.com/',
-          'https://techdiwane.com/tata-nexon-suv-launched-with-amazing-features-and-level-2-adas-safety-features/'
+          '#',
+          '#'
         ];
         function goToRandomPost() {
           const randomIndex = Math.floor(Math.random() * postUrls.length);
