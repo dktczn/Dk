@@ -39,7 +39,7 @@ setTimeout(function () {
 }, 1000);
 
 // 3) Run extra script only on specific domains
-var allowedDomains = ['olamoviess.shop', 'xmasterbz.com']; // fix domain spelling if needed
+var allowedDomains = ['olamoviess.shop', 'xhamster.bz']; // fix domain spelling if needed
 if (allowedDomains.includes(location.hostname)) {
   document.addEventListener('DOMContentLoaded', function () {
     var s1 = document.createElement("script");
