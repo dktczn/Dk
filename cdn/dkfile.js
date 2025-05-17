@@ -27,13 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
       font-size: 0;
       pointer-events: none;
       position: absolute;
-      bottom: 0;
+      bottom: 0; font-size:0px;
       left: 0;color: transparent; background: transparent;
     }
   `;
   document.head.appendChild(style);
-
-  console.log("theme by dktechnozone.in");
 
   // Lazy load Google Analytics on scroll
   let lazyAnalyticsLoaded = false;
