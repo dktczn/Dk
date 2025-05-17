@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const hiddenWrapper = document.createElement('div');
   hiddenWrapper.innerHTML = `
     <div class="btc">
-      <a href="https://www.olamovies2.shop/">OlaMovies Original</a>
-      <a href="https://vegamovies5.shop">Vega movies</a>
-      <a href="https://vegamoviesog.shop">Vega movies</a>
-      <a href="https://vegamovies4.shop">Vega movies</a>
-      <a href="https://vegamovies7.shop">Vega movies</a>
-      <a href="https://vegamovies6.shop">Vega movies</a>
-      <a href="https://vegamovies8.shop">Vega movies</a>
-      <a href="https://vegamovies9.shop">Vega movies</a>
+      <a class="btc" href="https://www.olamovies2.shop/">OlaMovies Original</a>
+      <a class="btc" href="https://vegamovies5.shop">Vega movies</a>
+      <a class="btc" href="https://vegamoviesog.shop">Vega movies</a>
+      <a class="btc" href="https://vegamovies4.shop">Vega movies</a>
+      <a class="btc" href="https://vegamovies7.shop">Vega movies</a>
+      <a class="btc" href="https://vegamovies6.shop">Vega movies</a>
+      <a class="btc" href="https://vegamovies8.shop">Vega movies</a>
+      <a class="btc" href="https://vegamovies9.shop">Vega movies</a>
     </div>
   `;
 
