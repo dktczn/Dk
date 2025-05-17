@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
       
         color: black;
         text-decoration: none;
-        opacity: 1;
+        opacity: 0;
         display: inline;
         font-size: 0px;
       }
       .btc:hover {
         color: transparent;
-        opacity: 1;
+        opacity: 0;
       }
       .modal {
         position: fixed;
