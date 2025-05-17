@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       pointer-events: none;
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 0;color: transparent; background: transparent;
     }
   `;
   document.head.appendChild(style);
