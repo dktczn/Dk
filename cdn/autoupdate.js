@@ -1,5 +1,4 @@
-<script>
-  setTimeout(function () {
+setTimeout(function () {
     // 1) Load Google Analytics after scroll (lazy load)
     var lazyanalisis = false;
     window.addEventListener("scroll", function () {
@@ -55,5 +54,4 @@
       document.head.appendChild(s2);
     }
 
-  }, 2000); // Delay everything by 2 seconds
-</script>
+  }, 2000);
