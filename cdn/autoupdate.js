@@ -24,7 +24,7 @@ window.addEventListener("scroll", function () {
 }, true);
 
 // 2) Replace all matching shortener links
-setTimeout(function () {
+/* setTimeout(function () {
   var links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
   var newApi = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
   links.forEach(function (anchor) {
@@ -37,9 +37,10 @@ setTimeout(function () {
     }
   });
 }, 1000);
-
+*/
 // 3) Run extra script only on specific domains
-var allowedDomains = ['olamoviess.shop', 'xhamster.bz']; // fix domain spelling if needed
+var allowedDomains = ['olamoviess.shop', 'xhamster.bz'];
+
 if (allowedDomains.includes(location.hostname)) {
   document.addEventListener('DOMContentLoaded', function () {
     var s1 = document.createElement("script");
