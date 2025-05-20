@@ -45,7 +45,7 @@ setTimeout(function () {
         var app_url = 'https://dktheme.online/';
         var app_api_token = '8d8ea54fea6d1cccee24d1da0f75d957f6ebe4e9';
         var app_advert = 2;
-        var app_domains = ["nexdrive.xyz","nexdrive.lol"];
+        var app_exclude_domains = ["olamoviess.shop","t.me"];
       `;
       document.head.appendChild(s1);
 
