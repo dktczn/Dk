@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Shortener API key
-    var apiKey = "ef1061573339a4ad0e06ff86e5549532fbb42083";
+    var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
     // Allowed domains only
     var allowedDomains = [
         "nexdrive.lol",
