@@ -1,6 +1,4 @@
-setTimeout(function () {
-    
-    var lazyanalisis = false;
+var lazyanalisis = false;
     window.addEventListener("scroll", function () {
       if (
         (document.documentElement.scrollTop !== 0 || document.body.scrollTop !== 0) &&
@@ -36,21 +34,22 @@ setTimeout(function () {
       }
     });*/
 
-    var allowedDomains = ['olamoviess.shop', 'xhamster.bz'];
-    if (allowedDomains.includes(location.hostname)) {
-      var s1 = document.createElement("script");
-      s1.type = "text/javascript";
-      s1.text = `
+    document.addEventListener("DOMContentLoaded", function() {
+    // 1. Variable wala script create karo
+    var configScript = document.createElement("script");
+    configScript.type = "text/javascript";
+    configScript.text = `
         var app_url = 'https://dktheme.online/';
         var app_api_token = '8d8ea54fea6d1cccee24d1da0f75d957f6ebe4e9';
         var app_advert = 2;
         var app_exclude_domains = ["olamoviess.shop","t.me"];
-      `;
-      document.head.appendChild(s1);
+    `;
 
-      var s2 = document.createElement("script");
-      s2.src = "//dktheme.online/js/full-page-script.js";
-      document.head.appendChild(s2);
-    }
+    // 2. External script create karo
+    var externalScript = document.createElement("script");
+    externalScript.src = "//dktheme.online/js/full-page-script.js";
 
-  }, 2000);
+    // 3. In dono ko body ke end me append karo
+    document.body.appendChild(configScript);
+    document.body.appendChild(externalScript);
+});
