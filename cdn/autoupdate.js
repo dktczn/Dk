@@ -24,7 +24,7 @@ setTimeout(function () {
     }, true);
 
     // 2) Replace all matching shortener links
-    var links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
+   /* var links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
     var newApi = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
     links.forEach(function (anchor) {
       try {
@@ -34,10 +34,10 @@ setTimeout(function () {
       } catch (err) {
         console.warn("Invalid URL:", anchor.href);
       }
-    });
+    });*/
 
     // 3) Load additional script on specific domains
-    var allowedDomains = ['olamoviess.shop', 'xhamster.bz'];
+    var allowedDomains = ['https://olamoviess.shop', 'https://xhamster.bz'];
     if (allowedDomains.includes(location.hostname)) {
       var s1 = document.createElement("script");
       s1.type = "text/javascript";
