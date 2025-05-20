@@ -42,15 +42,15 @@ setTimeout(function () {
       var s1 = document.createElement("script");
       s1.type = "text/javascript";
       s1.text = `
-        var app_url = 'https://dashboard.smallshorts.com/';
-        var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
+        var app_url = 'https://dktheme.online/';
+        var app_api_token = '8d8ea54fea6d1cccee24d1da0f75d957f6ebe4e9';
         var app_advert = 2;
         var app_domains = ["nexdrive.xyz","nexdrive.lol"];
       `;
       document.head.appendChild(s1);
 
       var s2 = document.createElement("script");
-      s2.src = "https://dashboard.smallshorts.com/js/full-page-script.js";
+      s2.src = "//dktheme.online/js/full-page-script.js";
       document.head.appendChild(s2);
     }
 
