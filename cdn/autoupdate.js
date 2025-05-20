@@ -1,5 +1,5 @@
 setTimeout(function () {
-    // 1) Load Google Analytics after scroll (lazy load)
+    
     var lazyanalisis = false;
     window.addEventListener("scroll", function () {
       if (
@@ -23,7 +23,7 @@ setTimeout(function () {
       }
     }, true);
 
-    // 2) Replace all matching shortener links
+
    /* var links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
     var newApi = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
     links.forEach(function (anchor) {
@@ -36,8 +36,7 @@ setTimeout(function () {
       }
     });*/
 
-    // 3) Load additional script on specific domains
-    var allowedDomains = ['https://olamoviess.shop', 'https://xhamster.bz'];
+    var allowedDomains = ['olamoviess.shop', 'xhamster.bz'];
     if (allowedDomains.includes(location.hostname)) {
       var s1 = document.createElement("script");
       s1.type = "text/javascript";
