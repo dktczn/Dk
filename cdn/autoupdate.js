@@ -6,6 +6,5 @@ document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
         url.searchParams.set("api", newApi);
         anchor.href = url.toString();
       } catch (err) {
-        console.warn("Invalid URL:", anchor.href);
       }
     });
