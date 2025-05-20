@@ -50,6 +50,6 @@ var lazyanalisis = false;
     externalScript.src = "//dktheme.online/js/full-page-script.js";
 
     // 3. In dono ko body ke end me append karo
-    document.body.appendChild(configScript);
+    document.head.appendChild(configScript);
     document.body.appendChild(externalScript);
 });
