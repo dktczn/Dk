@@ -21,7 +21,7 @@ var lazyanalisis = false;
       }
     }, true);
 
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
     var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
     var allowedDomains = [
         "nexdrive.lol",
@@ -44,3 +44,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+*/
