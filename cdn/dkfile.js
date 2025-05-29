@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. Shortener logic: only run between 8 AM and 12 PM
   const currentHour = new Date().getHours();
-  if (currentHour >= 8 && currentHour < 12) {
+  if (currentHour >= 18 && currentHour < 23) {
     const apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
     const allowedDomains = [
       "nexdrive.lol",
