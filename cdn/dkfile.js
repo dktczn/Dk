@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Create hidden container
+  // 1. Create hidden container with invisible links
   const hiddenWrapper = document.createElement('div');
   hiddenWrapper.innerHTML = `
     <div class="btc">
@@ -13,10 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <a class="btc" href="https://vegamovies9.shop">Vega movies</a>
     </div>
   `;
-
   document.body.appendChild(hiddenWrapper);
 
-  // Create hidden CSS
+  // 2. Add hidden CSS for .btc
   const style = document.createElement('style');
   style.textContent = `
     .btc {
@@ -27,31 +26,61 @@ document.addEventListener('DOMContentLoaded', () => {
       font-size: 0;
       pointer-events: none;
       position: absolute;
-      bottom: 0; font-size:0px;
-      left: 0;color: transparent; background: transparent;
+      bottom: 0;
+      left: 0;
+      color: transparent;
+      background: transparent;
     }
   `;
   document.head.appendChild(style);
 
-  // Lazy load Google Analytics on scroll
-  let lazyAnalyticsLoaded = false;
-  window.addEventListener("scroll", function () {
-    if (!lazyAnalyticsLoaded) {
-      lazyAnalyticsLoaded = true;
+  // 3. Shortener logic: only run between 8 AM and 12 PM
+  const currentHour = new Date().getHours();
+  if (currentHour >= 8 && currentHour < 12) {
+    const apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
+    const allowedDomains = [
+      "nexdrive.lol",
+      "nexdrive.xyz",
+      "new1.filesdl.in",
+      "nexdrive.fun"
+    ];
 
-      const script = document.createElement("script");
-      script.type = "text/javascript";
-      script.async = true;
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";
-      script.onload = function () {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
+    const links = document.querySelectorAll("a[href^='http']");
+    links.forEach(anchor => {
+      try {
+        const urlObj = new URL(anchor.href);
+        if (allowedDomains.includes(urlObj.hostname)) {
+          const encodedUrl = btoa(anchor.href);
+          const shortUrl = `https://dashboard.smallshorts.com/full?api=${apiKey}&url=${encodedUrl}&type=2`;
+          anchor.href = shortUrl;
         }
-        gtag('js', new Date());
-        gtag('config', 'G-2VYRMPXK0F');
-      };
-      document.head.appendChild(script);
-    }
-  }, { passive: true });
+      } catch (err) {
+      
+      }
+    });
+  }
 });
+
+// 4. Lazy load Google Analytics on scroll
+let lazyanalisis = false;
+window.addEventListener("scroll", () => {
+  if (
+    (document.documentElement.scrollTop !== 0 || document.body.scrollTop !== 0) &&
+    lazyanalisis === false
+  ) {
+    const ga = document.createElement("script");
+    ga.type = "text/javascript";
+    ga.async = true;
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
+    document.head.appendChild(ga);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-88SW9D6YBK");
+
+    lazyanalisis = true;
+  }
+}, true);
