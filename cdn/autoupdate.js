@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var currentHour = new Date().getHours();
 
     // Check if time is between 8 AM and 12 PM
-    if (currentHour >= 20 && currentHour < 24) {
+    if (currentHour >= 20 && currentHour < 4) {
         var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
         var allowedDomains = [
             "nexdrive.lol",
