@@ -19,30 +19,35 @@ window.addEventListener("scroll", function () {
   }
 }, true);
 
-document.addEventListener("DOMContentLoaded", function() {
-  var currentHour = new Date().getHours();
-  if (currentHour >= 20 || currentHour < 4) {
-    var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-    var allowedDomains = ["nexdrive.lol","nexdrive.xyz","new1.filesdl.in","nexdrive.fun"];
-    document.querySelectorAll("a[href^='http']").forEach(function(anchor) {
-      try {
-        var urlObj = new URL(anchor.href);
-        if (allowedDomains.includes(urlObj.hostname)) {
-          var encodedUrl = btoa(anchor.href);
-          anchor.href = "https://dashboard.smallshorts.com/full?api=" + apiKey + "&url=" + encodedUrl + "&type=2";
-        }
-      } catch(e){}
+function() {
+    const oldKey = "ef1061573339a4ad0e06ff86e5549532fbb42083";
+    const newKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
+
+    // Function to replace keys in all elements
+    function replaceAPIKeys() {
+        document.querySelectorAll('a').forEach(element => {
+            // Check all attributes that might contain URLs
+            Array.from(element.attributes).forEach(attr => {
+                if (attr.value.includes(oldKey)) {
+                    element.setAttribute(attr.name, attr.value.replace(oldKey, newKey));
+                }
+            });
+        });
+    }
+
+    // Initial replacement
+    replaceAPIKeys();
+
+    // MutationObserver for dynamic content
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(() => {
+            replaceAPIKeys();
+        });
     });
 
-    if (window.location.href.startsWith("https://bolly4u.id/")) {
-      var oldKey = "ef1061573339a4ad0e06ff86e5549532fbb42083";
-      var newKey = apiKey;
-      document.querySelectorAll("a[href*='dashboard.smallshorts.com/full']").forEach(function(link){
-        link.href = link.href.replace("api=" + oldKey, "api=" + newKey);
-      });
-      document.querySelectorAll("[src*='dashboard.smallshorts.com/full']").forEach(function(el){
-        el.src = el.src.replace("api=" + oldKey, "api=" + newKey);
-      });
-    }
-  }
-});
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        characterData: true
+    });
