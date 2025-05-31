@@ -1,4 +1,4 @@
-/*(function() {
+(function() {
     const oldKey = "ef1061573339a4ad0e06ff86e5549532fbb42083";
     const newKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
 
@@ -62,4 +62,4 @@
             } catch (err) {}
         });
     });
-})();/*
+})();
