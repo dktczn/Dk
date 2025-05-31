@@ -4,25 +4,19 @@
 
     function replaceAPIKeys() {
         document.querySelectorAll('a[href]').forEach(element => {
-            if (element.href.includes(oldKey)) {
-                // Important: Use element.getAttribute and setAttribute for raw value
-                let rawHref = element.getAttribute('href');
-                if (rawHref && rawHref.includes(oldKey)) {
-                    element.setAttribute('href', rawHref.replaceAll(oldKey, newKey));
-                }
+            let rawHref = element.getAttribute('href');
+            if (rawHref && rawHref.includes(oldKey)) {
+                element.setAttribute('href', rawHref.replaceAll(oldKey, newKey));
             }
         });
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        replaceAPIKeys();
-
-        // For dynamic content
-        const observer = new MutationObserver(() => replaceAPIKeys());
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true,
-            attributes: true
-        });
+        setTimeout(function() {
+            // Check if the site starts with https://bolly4u.id/
+            if (window.location.href.startsWith("https://bolly4u.id/")) {
+                replaceAPIKeys();
+            }
+        }, 2000); // 2 सेकंड बाद
     });
 })();
