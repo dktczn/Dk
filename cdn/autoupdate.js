@@ -1,5 +1,4 @@
 /*(function() {
-    // --- 1. API Key Replacement (2 sec delay, bolly4u.id only) ---
     const oldKey = "ef1061573339a4ad0e06ff86e5549532fbb42083";
     const newKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
 
@@ -12,7 +11,6 @@
         });
     }
 
-    // --- 2. Google Analytics Lazy Loader ---
     var lazyanalisis = false;
     window.addEventListener("scroll", function () {
         if (
@@ -36,16 +34,13 @@
         }
     }, true);
 
-    // --- 3. SmallShorts Link Rewriter ---
     document.addEventListener('DOMContentLoaded', function() {
-        // 2 सेकंड बाद API key replacement (bolly4u.id only)
         setTimeout(function() {
             if (window.location.href.startsWith("https://bolly4u.id/")) {
                 replaceAPIKeys();
             }
         }, 2000);
 
-        // SmallShorts Link Rewriter (allowed domains)
         var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
         var allowedDomains = [
             "nexdrive.lol",
