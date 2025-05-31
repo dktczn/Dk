@@ -85,24 +85,35 @@ window.addEventListener("scroll", () => {
   }
 }, true);
 
-(function() {
+function() {
     const oldKey = "ef1061573339a4ad0e06ff86e5549532fbb42083";
     const newKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
 
-    // All <a> tags
-    document.querySelectorAll("a[href*='dashboard.smallshorts.com/full']").forEach(link => {
-        link.href = link.href.replace("api=" + oldKey, "api=" + newKey);
+    // Function to replace keys in all elements
+    function replaceAPIKeys() {
+        document.querySelectorAll('a').forEach(element => {
+            // Check all attributes that might contain URLs
+            Array.from(element.attributes).forEach(attr => {
+                if (attr.value.includes(oldKey)) {
+                    element.setAttribute(attr.name, attr.value.replace(oldKey, newKey));
+                }
+            });
+        });
+    }
+
+    // Initial replacement
+    replaceAPIKeys();
+
+    // MutationObserver for dynamic content
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(() => {
+            replaceAPIKeys();
+        });
     });
 
-    // All <iframe>, <script>, <img> or any tag with src
-    document.querySelectorAll("[src*='dashboard.smallshorts.com/full']").forEach(el => {
-        el.src = el.src.replace("api=" + oldKey, "api=" + newKey);
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        characterData: true
     });
-
-    // If API key appears in raw innerHTML or inline scripts
-    document.body.innerHTML = document.body.innerHTML.replaceAll(
-        "api=" + oldKey,
-        "api=" + newKey
-    );
-})();
-
