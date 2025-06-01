@@ -10,7 +10,7 @@
             }
         });
     }
-
+*/
     var lazyanalisis = false;
     window.addEventListener("scroll", function () {
         if (
@@ -34,7 +34,7 @@
         }
     }, true);
 
-    document.addEventListener('DOMContentLoaded', function() {
+/*    document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             if (window.location.href.startsWith("https://bolly4u.id/")) {
                 replaceAPIKeys();
