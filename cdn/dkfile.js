@@ -1,17 +1,7 @@
-(function() {
-    var s = document.createElement('script');
-    s.src = 'https://fpyf8.com/88/tag.min.js';
-    s.setAttribute('data-zone', '150777');
+(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://al5sm.com/tag.min.js',9415867,document.body||document.documentElement)
+var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyanalisis||0!=document.body.scrollTop&&!1===lazyanalisis)&&(!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyanalisis=!0)},!0);
 
-    function appendScript() {
-        var target = document.body || document.documentElement;
-        target.appendChild(s);
-    }
-
-    // Check if document.body is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', appendScript);
-    } else {
-        appendScript();
-    }
-})();
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2VYRMPXK0F');
