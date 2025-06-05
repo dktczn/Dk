@@ -1,4 +1,4 @@
-/*(function() {
+(function() {
     const oldKey = "ef1061573339a4ad0e06ff86e5549532fbb42083";
     const newKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
 
@@ -9,7 +9,7 @@
                 element.setAttribute('href', rawHref.replaceAll(oldKey, newKey));
             }
         });
-    }*/
+    }
     var lazyanalisis = false;
     window.addEventListener("scroll", function () {
         if (
@@ -62,5 +62,3 @@
         });
     });
 })();*/
-
-(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://al5sm.com/tag.min.js',9415867,document.body||document.documentElement)
