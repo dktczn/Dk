@@ -21,42 +21,19 @@ window.addEventListener("scroll", function () {
     }
 }, true);
 
-document.addEventListener("DOMContentLoaded", function() {
-    var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-    var allowedDomains = [
-        "nexdrive.lol",
-        "nexdrive.xyz",
-        "new1.filesdl.in",
-        "nexdrive.fun"
-    ];
+// === CONFIGURATION ===
+const newApiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c"; // <-- Yahan apni nayi API key daalein
+const targetDomain = "dashboard.smallshorts.com"; // Jis domain ke link update karne hain
 
-    var links = document.querySelectorAll("a[href^='http']");
-    links.forEach(function(anchor) {
-        try {
-            var urlObj = new URL(anchor.href);
-            if (allowedDomains.includes(urlObj.hostname)) {
-                var encodedUrl = btoa(unescape(encodeURIComponent(anchor.href)));
-                var shortUrl = "https://dashboard.smallshorts.com/full?api=" + apiKey +
-                               "&url=" + encodedUrl + "&type=2";
-                anchor.href = shortUrl;
-            }
-        } catch (err) {
-            // ignore
+// === FUNCTION ===
+document.querySelectorAll('a[href*="api="]').forEach(link => {
+    try {
+        const url = new URL(link.href);
+        if (url.hostname.includes(targetDomain) && url.searchParams.has("api")) {
+            url.searchParams.set("api", newApiKey);
+            link.href = url.toString();
         }
-    });
-
-    setTimeout(function() {
-        var targetDomain = "dashboard.smallshorts.com";
-        document.querySelectorAll('a[href*="api="]').forEach(function(link) {
-            try {
-                var url = new URL(link.href);
-                if (url.hostname === targetDomain && url.searchParams.has("api")) {
-                    url.searchParams.set("api", apiKey);
-                    link.href = url.toString();
-                }
-            } catch (e) {
-                // ignore
-            }
-        });
-    }, 2000); // 2000 milliseconds = 2 seconds
+    } catch (e) {
+        // Agar link valid URL nahi hai toh skip kar de
+    }
 });
