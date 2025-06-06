@@ -1,14 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-        const targetLinks = document.querySelectorAll('a[href^="https://dashboard.smallshorts.com/full?api="]');
-        
-        targetLinks.forEach(link => {
-            const oldUrl = new URL(link.href);
-            const newUrl = oldUrl.href.replace(
-                /api=\w+/gi, 
-                `api=ea96bc4942aa3d3737f7d767f7d9c6f2704a391c`
-            );
-            link.href = newUrl;
-        });
-    }, 2000); // 2 seconds delay
-});
+setTimeout(function() {
+    const currentURL = new URL(window.location.href);
+
+    // New API key
+    const newApiKey = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
+
+    // Replace the 'api' parameter
+    currentURL.searchParams.set('api', newApiKey);
+
+    // Replace the current URL without reloading the page (optional)
+    window.location.href = currentURL.toString();
+  }, 2000); // 2 seconds delay
