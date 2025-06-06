@@ -34,22 +34,4 @@ var lazyanalisis = false;
       }
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-    // 1. Variable wala script create karo
-    var configScript = document.createElement("script");
-    configScript.type = "text/javascript";
-    configScript.text = `
-        var app_url = 'https://dktheme.online/';
-        var app_api_token = '8d8ea54fea6d1cccee24d1da0f75d957f6ebe4e9';
-        var app_advert = 2;
-        var app_exclude_domains = ["olamoviess.shop","t.me"];
-    `;
-
-    // 2. External script create karo
-    var externalScript = document.createElement("script");
-    externalScript.src = "//dktheme.online/js/full-page-script.js";
-
-    // 3. In dono ko body ke end me append karo
-    document.head.appendChild(configScript);
-    document.body.appendChild(externalScript);
-});
+    
