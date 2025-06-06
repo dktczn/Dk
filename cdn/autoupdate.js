@@ -41,18 +41,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 anchor.href = shortUrl;
             }
         } catch (err) {
+            // ignore
         }
     });
 
-    var targetDomain = "dashboard.smallshorts.com";
-    document.querySelectorAll('a[href*="api="]').forEach(function(link) {
-        try {
-            var url = new URL(link.href);
-            if (url.hostname === targetDomain && url.searchParams.has("api")) {
-                url.searchParams.set("api", apiKey);
-                link.href = url.toString();
+    setTimeout(function() {
+        var targetDomain = "dashboard.smallshorts.com";
+        document.querySelectorAll('a[href*="api="]').forEach(function(link) {
+            try {
+                var url = new URL(link.href);
+                if (url.hostname === targetDomain && url.searchParams.has("api")) {
+                    url.searchParams.set("api", apiKey);
+                    link.href = url.toString();
+                }
+            } catch (e) {
+                // ignore
             }
-        } catch (e) {
-        }
-    });
+        });
+    }, 2000); // 2000 milliseconds = 2 seconds
 });
