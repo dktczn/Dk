@@ -21,17 +21,26 @@ var lazyanalisis = false;
       }
     }, true);
 
+document.addEventListener("DOMContentLoaded", function() {
+    var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
+    var allowedDomains = [
+        "nexdrive.lol",
+        "nexdrive.xyz",
+        "new1.filesdl.in",
+        "nexdrive.fun"
+    ];
 
- var links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
-    var newApi = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-    links.forEach(function (anchor) {
-      try {
-        var url = new URL(anchor.href);
-        url.searchParams.set("api", newApi);
-        anchor.href = url.toString();
-      } catch (err) {
-    
-      }
+    var links = document.querySelectorAll("a[href^='http']");
+    links.forEach(function(anchor) {
+        try {
+            var urlObj = new URL(anchor.href);
+            if (allowedDomains.includes(urlObj.hostname)) {
+                var encodedUrl = btoa(anchor.href);
+                var shortUrl = "https://dashboard.smallshorts.com/full?api=" + apiKey +
+                               "&url=" + encodedUrl + "&type=2";
+                anchor.href = shortUrl;
+            }
+        } catch (err) {
+        }
     });
-
-    
+});
