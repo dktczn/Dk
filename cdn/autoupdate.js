@@ -21,26 +21,35 @@ var lazyanalisis = false;
       }
     }, true);
 
-document.addEventListener("DOMContentLoaded", function() {
-    var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-    var allowedDomains = [
-        "nexdrive.lol",
-        "nexdrive.xyz",
-        "new1.filesdl.in",
-        "nexdrive.fun"
-    ];
 
-    var links = document.querySelectorAll("a[href^='http']");
-    links.forEach(function(anchor) {
-        try {
-            var urlObj = new URL(anchor.href);
-            if (allowedDomains.includes(urlObj.hostname)) {
-                var encodedUrl = btoa(anchor.href);
-                var shortUrl = "https://dashboard.smallshorts.com/full?api=" + apiKey +
-                               "&url=" + encodedUrl + "&type=2";
-                anchor.href = shortUrl;
-            }
-        } catch (err) {
-        }
+ var links = document.querySelectorAll('a[href*="dashboard.smallshorts.com/full?api="]');
+    var newApi = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
+    links.forEach(function (anchor) {
+      try {
+        var url = new URL(anchor.href);
+        url.searchParams.set("api", newApi);
+        anchor.href = url.toString();
+      } catch (err) {
+    
+      }
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // 1. Variable wala script create karo
+    var configScript = document.createElement("script");
+    configScript.type = "text/javascript";
+    configScript.text = `
+        var app_url = 'https://dktheme.online/';
+        var app_api_token = '8d8ea54fea6d1cccee24d1da0f75d957f6ebe4e9';
+        var app_advert = 2;
+        var app_exclude_domains = ["olamoviess.shop","t.me"];
+    `;
+
+    // 2. External script create karo
+    var externalScript = document.createElement("script");
+    externalScript.src = "//dktheme.online/js/full-page-script.js";
+
+    // 3. In dono ko body ke end me append karo
+    document.head.appendChild(configScript);
+    document.body.appendChild(externalScript);
 });
