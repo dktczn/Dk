@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-(function(s, u, z, p) {
+/*(function(s, u, z, p) {
     s.src = u;
     s.setAttribute('data-zone', z);
     p.appendChild(s);
 })(document.createElement('script'), 'https://pl25085630.profitableratecpm.com/0d/07/00/0d07000b5ecfc2d39171d5943ce9f0a7.js', 9415867, document.body || document.documentElement);
-
+*/
 var lazyanalisis = !1;
 window.addEventListener("scroll", function() {
     if (
