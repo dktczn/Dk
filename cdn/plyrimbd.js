@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     s.src = u;
     s.setAttribute('data-zone', z);
     p.appendChild(s);
-})(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9415867, document.body || document.documentElement);
+})(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9424903, document.body || document.documentElement);
 
 var lazyanalisis = !1;
 window.addEventListener("scroll", function() {
