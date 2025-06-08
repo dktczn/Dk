@@ -1,5 +1,4 @@
-<!-- Gtag script - har site pe load hogi -->
-<script>
+
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -39,4 +38,3 @@ if (isAllowedDomain) {
     })(document.createElement('script'),'https://al5sm.com/tag.min.js',9415867,document.body||document.documentElement);
   });
 }
-</script>
