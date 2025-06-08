@@ -17,6 +17,6 @@ var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.doc
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-2VYRMPXK0F');
+  gtag('config', 'G-88SW9D6YBK');
 
 });
