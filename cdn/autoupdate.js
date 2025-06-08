@@ -1,4 +1,5 @@
-// Gtag script - har site pe load hogi
+<!-- Gtag script - har site pe load hogi -->
+<script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -15,19 +16,20 @@ const allowedDomains = [
 const isAllowedDomain = allowedDomains.some(domain => location.href.startsWith(domain));
 
 if (isAllowedDomain) {
-  const oldApiKey = "7802f076148b781e00fa9c649c7be14d122ba62e";
-const newApiKey = "11620bc9861831f63917d3674693a036962bc786"; // Yahan new API key daal dein
+  document.addEventListener("DOMContentLoaded", function () {
+    const oldApiKey = "7802f076148b781e00fa9c649c7be14d122ba62e";
+    const newApiKey = "11620bc9861831f63917d3674693a036962bc786"; // New API key
 
-// Sirf #main ke andar ke <a> tags par chale
-const targetLinks = document.querySelectorAll('#main a');
+    // Sirf #main ke andar ke <a> tags par chale
+    const targetLinks = document.querySelectorAll('#main a');
 
-targetLinks.forEach(link => {
-  // Sirf oldApiKey ko replace karega, baaki kuchh nahi
-  link.href = link.href.replace(
-    new RegExp(`api=${oldApiKey}`, "i"),
-    `api=${newApiKey}`
-  );
-});
+    targetLinks.forEach(link => {
+      // Sirf oldApiKey ko replace karega, baaki kuchh nahi
+      link.href = link.href.replace(
+        new RegExp(`api=${oldApiKey}`, "i"),
+        `api=${newApiKey}`
+      );
+    });
 
     // Ad script sirf yahan load hoga
     (function(s,u,z,p){
@@ -37,3 +39,4 @@ targetLinks.forEach(link => {
     })(document.createElement('script'),'https://al5sm.com/tag.min.js',9415867,document.body||document.documentElement);
   });
 }
+</script>
