@@ -15,8 +15,8 @@ const allowedDomains = [
 const isAllowedDomain = allowedDomains.some(domain => location.href.startsWith(domain));
 
 if (isAllowedDomain) {
-  const oldApiKey = "11620bc9861831f63917d3674693a036962bc786";
-const newApiKey = "YOUR_NEW_API_KEY"; // Yahan new API key daal dein
+  const oldApiKey = "7802f076148b781e00fa9c649c7be14d122ba62e";
+const newApiKey = "11620bc9861831f63917d3674693a036962bc786"; // Yahan new API key daal dein
 
 // Sirf #main ke andar ke <a> tags par chale
 const targetLinks = document.querySelectorAll('#main a');
