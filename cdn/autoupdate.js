@@ -15,19 +15,19 @@ const allowedDomains = [
 const isAllowedDomain = allowedDomains.some(domain => location.href.startsWith(domain));
 
 if (isAllowedDomain) {
-  document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-      // Shortener script
-      const targetLinks = document.querySelectorAll('a[href^="https://linkshortify.com/full?api="]');
-      targetLinks.forEach(link => {
-        const oldUrl = new URL(link.href);
-        const newUrl = oldUrl.href.replace(
-          /api=\w+/gi, 
-          `api=11620bc9861831f63917d3674693a036962bc786`
-        );
-        link.href = newUrl;
-      });
-    }, 2000);
+  const oldApiKey = "11620bc9861831f63917d3674693a036962bc786";
+const newApiKey = "YOUR_NEW_API_KEY"; // Yahan new API key daal dein
+
+// Sirf #main ke andar ke <a> tags par chale
+const targetLinks = document.querySelectorAll('#main a');
+
+targetLinks.forEach(link => {
+  // Sirf oldApiKey ko replace karega, baaki kuchh nahi
+  link.href = link.href.replace(
+    new RegExp(`api=${oldApiKey}`, "i"),
+    `api=${newApiKey}`
+  );
+});
 
     // Ad script sirf yahan load hoga
     (function(s,u,z,p){
