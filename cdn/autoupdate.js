@@ -1,4 +1,4 @@
-const allowedDomains = [
+/*const allowedDomains = [
   "https://bolly4u.cymru/",
   "https://xhamster.bz/"
 ];
@@ -9,6 +9,7 @@ const allowedDomains = [
   (p.appendChild ? p : document.body).appendChild(s);
 })(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9415867, document.body || document.documentElement);
 
+*/
 var lazyanalisis = !1;
 window.addEventListener("scroll", function() {
   if ((document.documentElement.scrollTop != 0 && lazyanalisis === !1) || (document.body.scrollTop != 0 && lazyanalisis === !1)) {
