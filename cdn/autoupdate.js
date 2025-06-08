@@ -18,7 +18,7 @@ if (isAllowedDomain) {
   document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       // Shortener script
-      const targetLinks = document.querySelectorAll('a[href^="https://linkshortify.com/api?api="]');
+      const targetLinks = document.querySelectorAll('a[href^="https://linkshortify.com/full?api="]');
       targetLinks.forEach(link => {
         const oldUrl = new URL(link.href);
         const newUrl = oldUrl.href.replace(
