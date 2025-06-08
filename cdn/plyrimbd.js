@@ -75,11 +75,6 @@ gtag('config', 'G-2VYRMPXK0F');
 
 const allowedDomains = [
   "https://bolly4u.cymru/",
-  "https://filmyflyhd.fun/"
-];
-
-const allowedDomains = [
-  "https://filmyflyhd.fun/",
   "https://xhamster.bz/"
 ];
 
