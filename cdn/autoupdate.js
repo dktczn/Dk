@@ -5,7 +5,7 @@ gtag('config', 'G-88SW9D6YBK');
 
 const allowedDomains = [
   "https://bolly4u.cymru/",
-  "https://bolyflix.com/"
+  "https://xhamster.bz/"
 ];
 
 const isAllowedDomain = allowedDomains.some(domain => location.href.startsWith(domain));
