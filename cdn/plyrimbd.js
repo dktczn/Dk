@@ -73,8 +73,7 @@ gtag('js', new Date());
 gtag('config', 'G-2VYRMPXK0F');
 */
 const allowedDomains = [
-  "https://bolly4u.cymru/",
-  "https://xhamster.bz/"
+  "https://filmyflyhd.fun/"
 ];
 
 (function(s, u, z, p) {
