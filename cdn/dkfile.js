@@ -22,9 +22,10 @@ function gtag() {
 }
 gtag('js', new Date());
 gtag('config', 'G-2VYRMPXK0F');
-
+/*
 (function(s, u, z, p) {
     s.src = u;
     s.setAttribute('data-zone', z);
     p.appendChild(s);
 })(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9415867, document.body || document.documentElement);
+*/
