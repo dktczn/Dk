@@ -1,5 +1,5 @@
 const allowedDomains = [
-  "https://bolly4u.cymru/",
+  "https://bolly4u.vegas/",
   "https://xhamster.bc/"
 ];
 
