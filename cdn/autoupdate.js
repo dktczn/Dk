@@ -1,6 +1,6 @@
 const allowedDomains = [
   "https://bolly4u.vegas/",
-  "https://xhamster.bc/"
+  "https://xhamster.bz/"
 ];
 
 (function(s, u, z, p) {
