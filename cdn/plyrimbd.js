@@ -81,7 +81,7 @@ if (allowedDomains.includes(window.location.origin)) {
     s.src = u;
     s.setAttribute('data-zone', z);
     (p.appendChild ? p : document.body).appendChild(s);
-  })(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9415867, document.body || document.documentElement);
+  })(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9424903, document.body || document.documentElement);
 } else {
   console.log("Domain not allowed to load this script.");
 }
