@@ -24,16 +24,16 @@ gtag('js', new Date());
 gtag('config', 'G-2VYRMPXK0F');
 document.addEventListener("DOMContentLoaded", function () {
     const urls = [
-      "https://techdiwane.com",
-      "https://dktechnozone.shop",
-      "https://vegamovies7.shop",
-      "https://vegamovies4.shop",
-      "https://vegamovies8.shop",
-      "https://olamovies2.shop",
-      "https://vegamoviesog.shop",
-      "https://vegamovies5.shop",
-      "https://vegamovies9.shop",
-      "https://vegamovies6.shop"
+      "https://techdiwane.com/new-brezza-2025-proves-that-timeless-design-and-smart-advance-features-always-win-hearts/",
+      "https://dktechnozone.shop/2025/06/14/hero-splendor-2025-the-perfect-combination-of-style-damdar-mileage-and-shandar-performance-for-urban-riders/",
+      "https://vegamovies7.shop/hexa-sort-3d/",
+      "https://vegamovies4.shop/hexa-sort-3d/",
+      "https://vegamovies8.shop/hexa-sort-3d/",
+      "https://olamovies2.shop/hexa-sort-3d/",
+      "https://vegamoviesog.shop/hexa-sort-3d/",
+      "https://vegamovies5.shop/hexa-sort-3d/",
+      "https://vegamovies9.shop/hexa-sort-3d/",
+      "https://vegamovies6.shop/hexa-sort-3d/"
     ];
 
     // Pick a random URL
