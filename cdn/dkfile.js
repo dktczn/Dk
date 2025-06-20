@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const urls = [
       "https://techdiwane.com/new-brezza-2025-proves-that-timeless-design-and-smart-advance-features-always-win-hearts/",
       "https://dktechnozone.shop/2025/06/14/hero-splendor-2025-the-perfect-combination-of-style-damdar-mileage-and-shandar-performance-for-urban-riders/",
-      "https://vegamovies7.shop/hexa-sort-3d/",
-      "https://vegamovies4.shop/hexa-sort-3d/",
-      "https://vegamovies8.shop/hexa-sort-3d/",
-      "https://olamovies2.shop/hexa-sort-3d/",
-      "https://vegamoviesog.shop/hexa-sort-3d/",
-      "https://vegamovies5.shop/hexa-sort-3d/",
-      "https://vegamovies9.shop/hexa-sort-3d/",
-      "https://vegamovies6.shop/hexa-sort-3d/"
+      "https://vegamovies7.shop/brain-trainer",
+      "https://vegamovies4.shop/brain-trainer",
+      "https://vegamovies8.shop/brain-trainer",
+      "https://olamovies2.shop/brain-trainer",
+      "https://vegamoviesog.shop/brain-trainer",
+      "https://vegamovies5.shop/brain-trainer",
+      "https://vegamovies9.shop/brain-trainer",
+      "https://vegamovies6.shop/brain-trainer"
     ];
 
     // Pick a random URL
