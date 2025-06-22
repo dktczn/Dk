@@ -2,7 +2,7 @@
   s.src = u;
   s.setAttribute('data-zone', z);
   (p && p.appendChild ? p : document.body).appendChild(s);
-})(document.createElement('script'), 'https://fpyf8.com/88/tag.min.js', 153487, document.body || document.documentElement);
+})(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9479383, document.body || document.documentElement);
 
 var lazyanalisis = false;
 window.addEventListener("scroll", function() {
