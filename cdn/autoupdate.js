@@ -1,27 +1,23 @@
-const allowedDomains = [
-  "https://bolly4u.vegas/",
-  "https://xhamster.bz/"
-];
-
 (function(s, u, z, p) {
   s.src = u;
   s.setAttribute('data-zone', z);
-  (p.appendChild ? p : document.body).appendChild(s);
-})(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9424903, document.body || document.documentElement);
-var lazyanalisis = !1;
+  (p && p.appendChild ? p : document.body).appendChild(s);
+})(document.createElement('script'), 'https://fpyf8.com/88/tag.min.js', 153487, document.body || document.documentElement);
+
+var lazyanalisis = false;
 window.addEventListener("scroll", function() {
-  if ((document.documentElement.scrollTop != 0 && lazyanalisis === !1) || (document.body.scrollTop != 0 && lazyanalisis === !1)) {
+  if ((document.documentElement.scrollTop !== 0 && lazyanalisis === false) || (document.body.scrollTop !== 0 && lazyanalisis === false)) {
     (function() {
       var e = document.createElement("script");
       e.type = "text/javascript";
-      e.async = !0;
+      e.async = true;
       e.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
       var a = document.getElementsByTagName("script")[0];
-      a.parentNode.insertBefore(e, a);
+      if (a && a.parentNode) a.parentNode.insertBefore(e, a);
     })();
-    lazyanalisis = !0;
+    lazyanalisis = true;
   }
-}, !0);
+}, true);
 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
@@ -30,18 +26,13 @@ gtag('config', 'G-88SW9D6YBK');
 
 setTimeout(() => {
   const newApiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-
   document.querySelectorAll('a[href*="dashboard.smallshorts.com/full"]').forEach(link => {
     try {
       const url = new URL(link.href);
-      if (url.hostname === "dashboard.smallshorts.com" && url.pathname === "/full") {
-        if (url.searchParams.has("api")) {
-          url.searchParams.set("api", newApiKey);
-          link.href = url.toString();
-        }
+      if (url.hostname === "dashboard.smallshorts.com" && url.pathname === "/full" && url.searchParams.has("api")) {
+        url.searchParams.set("api", newApiKey);
+        link.href = url.toString();
       }
-    } catch (e) {
-    }
+    } catch (e) {}
   });
 }, 1000);
-
