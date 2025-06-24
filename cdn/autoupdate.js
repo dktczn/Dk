@@ -1,6 +1,6 @@
 function isBetween8PMand5AM() {
   const hours = new Date().getHours();
-  return hours >= 1 || hours < 24;
+  return hours >= 20 || hours < 5;
 }
 
 if (isBetween8PMand5AM()) {
