@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 iframeWrapper.style.margin = "auto";
 
                 const iframe = document.createElement("iframe");
-                iframe.src = `https://lp352engiao.com/play/${imdbTitle}`;
+                iframe.src = `https://kim361loger.com/play/${imdbTitle}`;
                 iframe.style.position = "absolute";
                 iframe.style.top = "0";
                 iframe.style.left = "0";
