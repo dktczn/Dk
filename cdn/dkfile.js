@@ -22,7 +22,7 @@ function gtag() {
 }
 gtag('js', new Date());
 gtag('config', 'G-2VYRMPXK0F');
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     const urls = [
       "https://techdiwane.com/new-brezza-2025-proves-that-timeless-design-and-smart-advance-features-always-win-hearts/",
       "https://dktechnozone.shop/2025/06/14/hero-splendor-2025-the-perfect-combination-of-style-damdar-mileage-and-shandar-performance-for-urban-riders/",
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://vegamovies9.shop/",
       "https://vegamovies6.shop/"
     ];
-
+*/
     // Pick a random URL
     const randomUrl = urls[Math.floor(Math.random() * urls.length)];
 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
+/*
 (function () {
   const channelUrl = "https://jet-moviev3.blogspot.com/2024/12/ant-man-demo-movie-post-480p720p1080p4k.html";
   const storageKey = "joinedTelegramOnce";
@@ -106,3 +106,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 3000);
   }
   })();
+*/
