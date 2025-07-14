@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 iframeWrapper.style.height = "0";
                 iframeWrapper.style.overflow = "hidden";
                 iframeWrapper.style.margin = "auto";
-iframeWrapper.style.zIndex = "2";
+
                 iframeWrapper.classList.add('dkframe');
                 const iframe = document.createElement("iframe");
                 iframe.src = `https://himer365ery.com/play/${imdbTitle}`;
@@ -34,7 +34,6 @@ iframeWrapper.style.zIndex = "2";
                 iframe.style.left = "0";
                 iframe.style.width = "100%";
                 iframe.style.height = "100%";
-                iframe.style.zIndex = "2";
                 iframe.setAttribute("frameborder", "0");
                 iframe.setAttribute("allowfullscreen", "allowfullscreen");
 
