@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const iframeContainer = document.createElement("div");
                 iframeContainer.style.textAlign = "center";
-                iframeContainer.style.marginTop = "20px";
+                iframeContainer.style.marginTop = "0px";
 
                 const iframeWrapper = document.createElement("div");
                 iframeWrapper.style.position = "relative";
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 iframe.style.left = "0";
                 iframe.style.width = "100%";
                 iframe.style.height = "100%";
+                iframe.style.z-index = "2";
                 iframe.setAttribute("frameborder", "0");
                 iframe.setAttribute("allowfullscreen", "allowfullscreen");
 
