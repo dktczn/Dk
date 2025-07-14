@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 iframeWrapper.style.overflow = "hidden";
                 iframeWrapper.style.margin = "auto";
 
+                iframeWrapper.classList.add('dkframe');
                 const iframe = document.createElement("iframe");
                 iframe.src = `https://himer365ery.com/play/${imdbTitle}`;
                 iframe.style.position = "absolute";
