@@ -24,7 +24,7 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-88SW9D6YBK');
 
-setTimeout(() => {
+/*setTimeout(() => {
   const newApiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
   document.querySelectorAll('a[href*="dashboard.smallshorts.com/full"]').forEach(link => {
     try {
@@ -36,3 +36,4 @@ setTimeout(() => {
     } catch (e) {}
   });
 }, 1000);
+*/
