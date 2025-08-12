@@ -1,8 +1,20 @@
-(function(s, u, z, p) {
-  s.src = u;
-  s.setAttribute('data-zone', z);
-  (p && p.appendChild ? p : document.body).appendChild(s);
-})(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9173610, document.body || document.documentElement);
+const allowedDomains = [
+  'https://xhamster.com',
+  'www.example.com',
+  'shop.example.com',
+  'blog.example.com',
+  'another-domain.com',
+  'www.another-domain.com'
+];
+
+if (allowedDomains.includes(window.location.hostname)) {
+    (function(s, u, z, p) {
+    s.src = u;
+    s.setAttribute('data-zone', z);
+    (p && p.appendChild ? p : document.body).appendChild(s);
+  })(document.createElement('script'), 'https://al5sm.com/tag.min.js', 9173610, document.body || document.documentElement);
+
+}
 
 var lazyanalisis = false;
 window.addEventListener("scroll", function() {
