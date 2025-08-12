@@ -1,5 +1,5 @@
 const allowedDomains = [
-  'https://xhamster.com',
+  'xhamster.com',
   'www.example.com',
   'shop.example.com',
   'blog.example.com',
