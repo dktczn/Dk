@@ -36,3 +36,10 @@ setTimeout(() => {
     } catch (e) {}
   });
 }, 1000);
+
+document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.getElementById("v0-built-with-button-fd4bdc15-41d2-4d5b-8d92-350d5612846b");
+    if (btn) {
+        btn.remove(); 
+    }
+});
