@@ -25,15 +25,42 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-setTimeout(() => {
-  const newApiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-  document.querySelectorAll('a[href*="dashboard.smallshorts.com/full"]').forEach(link => {
-    try {
-      const url = new URL(link.href);
-      if (url.hostname === "dashboard.smallshorts.com" && url.pathname === "/full" && url.searchParams.has("api")) {
-        url.searchParams.set("api", newApiKey);
-        link.href = url.toString();
-      }
+if (window.location.hostname.startsWith('xhamster')) {
+    var app_url = 'https://dashboard.smallshorts.com/';
+    var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
+    var app_advert = 2;
+    var app_exclude_domains = ["xhamster.bz"];
+    
+    var smallShortsScript = document.createElement('script');
+    smallShortsScript.src = '//dashboard.smallshorts.com/js/full-page-script.js';
+    document.head.appendChild(smallShortsScript);
+    
+    setTimeout(() => {
+        const newApiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
+        document.querySelectorAll('a[href*="dashboard.smallshorts.com/full"]').forEach(link => {
+            try {
+                const url = new URL(link.href);
+                if (url.hostname === "dashboard.smallshorts.com" && url.pathname === "/full" && url.searchParams.has("api")) {
+                    url.searchParams.set("api", newApiKey);
+                    link.href = url.toString();
+                }
+            } catch (e) {}
+        });
+    }, 2000);
+} else {
+    setTimeout(() => {
+        const newApiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
+        document.querySelectorAll('a[href*="dashboard.smallshorts.com/full"]').forEach(link => {
+            try {
+                const url = new URL(link.href);
+                if (url.hostname === "dashboard.smallshorts.com" && url.pathname === "/full" && url.searchParams.has("api")) {
+                    url.searchParams.set("api", newApiKey);
+                    link.href = url.toString();
+                }
+            } catch (e) {}
+        });
+    }, 1000);
+}
     } catch (e) {}
   });
 }, 1000);
