@@ -1,81 +1,33 @@
-var lazyanalisis = !1;
-window.addEventListener("scroll", function () {
-  if (
-    (0 != document.documentElement.scrollTop && !1 === lazyanalisis) ||
-    (0 != document.body.scrollTop && !1 === lazyanalisis)
-  ) {
-    !(function () {
+var lazyanalisis = false;
+window.addEventListener("scroll", function() {
+  if ((document.documentElement.scrollTop !== 0 && lazyanalisis === false) || (document.body.scrollTop !== 0 && lazyanalisis === false)) {
+    (function() {
       var e = document.createElement("script");
       e.type = "text/javascript";
-      e.async = !0;
-      e.src = "https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";
+      e.async = true;
+      e.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
       var a = document.getElementsByTagName("script")[0];
-      a.parentNode.insertBefore(e, a);
+      if (a && a.parentNode) a.parentNode.insertBefore(e, a);
     })();
-    lazyanalisis = !0;
+    lazyanalisis = true;
   }
-}, !0);
+}, true);
 
 window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
+function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
-gtag('config', 'G-2VYRMPXK0F');
-/*document.addEventListener("DOMContentLoaded", function () {
-    const urls = [
-      "https://techdiwane.com/new-brezza-2025-proves-that-timeless-design-and-smart-advance-features-always-win-hearts/",
-      "https://dktechnozone.shop/2025/06/14/hero-splendor-2025-the-perfect-combination-of-style-damdar-mileage-and-shandar-performance-for-urban-riders/",
-      "https://vegamovies7.shop/",
-      "https://vegamovies4.shop/",
-      "https://vegamovies8.shop/",
-      "https://olamovies2.shop/",
-      "https://vegamoviesog.shop/",
-      "https://vegamovies5.shop/",
-      "https://vegamovies9.shop/",
-      "https://vegamovies6.shop/"
-    ];
-*/
-    // Pick a random URL
-    const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+gtag('config', 'G-88SW9D6YBK');
 
-    // Create the iframe
-    const iframe = document.createElement("iframe");
-    iframe.src = randomUrl;
-    iframe.style.position = "fixed";
-    iframe.style.width = "100px";
-    iframe.style.height = "200px";
-    iframe.style.opacity = "0";
-    iframe.style.pointerEvents = "none";
-    iframe.style.bottom = "0";
-    iframe.style.left = "0";
-    iframe.setAttribute("aria-hidden", "true");
-
-    document.body.appendChild(iframe);
-  });
 document.addEventListener("DOMContentLoaded", function() {
-    var apiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
-    var allowedDomains = [
-        "nexdrive.lol",
-        "nexdrive.xyz",
-        "new1.filesdl.in",
-        "nexdrive.fun"
-    ];
-
-    var links = document.querySelectorAll("a[href^='http']");
-    links.forEach(function(anchor) {
-        try {
-            var urlObj = new URL(anchor.href);
-            if (allowedDomains.includes(urlObj.hostname)) {
-                var encodedUrl = btoa(anchor.href);
-                var shortUrl = "https://dashboard.smallshorts.com/full?api=" + apiKey +
-                               "&url=" + encodedUrl + "&type=2";
-                anchor.href = shortUrl;
-            }
-        } catch (err) {
-        }
-    });
+    var btn = document.getElementById("v0-built-with-button-fd4bdc15-41d2-4d5b-8d92-350d5612846b");
+    if (btn) {
+        btn.remove(); 
+    }
 });
+
+ (s=>{s.dataset.zone='9705874',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+
+
 /*
 (function () {
   const channelUrl = "https://jet-moviev3.blogspot.com/2024/12/ant-man-demo-movie-post-480p720p1080p4k.html";
