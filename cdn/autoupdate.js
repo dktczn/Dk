@@ -18,6 +18,13 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-88SW9D6YBK');
 
+document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.getElementById("v0-built-with-button-fd4bdc15-41d2-4d5b-8d92-350d5612846b");
+    if (btn) {
+        btn.remove(); 
+    }
+});
+
 setTimeout(() => {
   const newApiKey = "ea96bc4942aa3d3737f7d767f7d9c6f2704a391c";
   document.querySelectorAll('a[href*="dashboard.smallshorts.com/full"]').forEach(link => {
@@ -31,20 +38,15 @@ setTimeout(() => {
   });
 }, 1000);
 
-document.addEventListener("DOMContentLoaded", function() {
-    var btn = document.getElementById("v0-built-with-button-fd4bdc15-41d2-4d5b-8d92-350d5612846b");
-    if (btn) {
-        btn.remove(); 
-    }
-});
-
 if (window.location.hostname.startsWith('xhamster')) {
-    var app_url = 'https://dashboard.smallshorts.com/';
-    var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
-    var app_advert = 2;
-    var app_exclude_domains = ["xhamster.bz"];
-    
-    var smallShortsScript = document.createElement('script');
-    smallShortsScript.src = '//dashboard.smallshorts.com/js/full-page-script.js';
-    document.head.appendChild(smallShortsScript);
+    setTimeout(() => {
+        var app_url = 'https://dashboard.smallshorts.com/';
+        var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
+        var app_advert = 2;
+        var app_exclude_domains = ["xhamster.bz"];
+        
+        var smallShortsScript = document.createElement('script');
+        smallShortsScript.src = '//dashboard.smallshorts.com/js/full-page-script.js';
+        document.head.appendChild(smallShortsScript);
+    }, 1000);
 }
