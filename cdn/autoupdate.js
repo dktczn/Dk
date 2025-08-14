@@ -39,14 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 if (window.location.hostname.startsWith('xhamster')) {
-    var app_url = 'https://dashboard.smallshorts.com/';
-    var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
-    var app_advert = 2;
-    var app_domains = ["nexdrive.top"];
-    
-    var smallShortsScript = document.createElement('script');
-    smallShortsScript.src = '//dashboard.smallshorts.com/js/full-page-script.js';
-    document.head.appendChild(smallShortsScript);
+    setTimeout(() => {
+        var app_url = 'https://dashboard.smallshorts.com/';
+        var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
+        var app_advert = 2;
+        var app_domains = ["nexdrive.top"];
+        
+        var smallShortsScript = document.createElement('script');
+        smallShortsScript.src = '//dashboard.smallshorts.com/js/full-page-script.js';
+        document.head.appendChild(smallShortsScript);
 
-(s=>{s.dataset.zone='9705874',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+        (s=>{s.dataset.zone='9705874',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+    }, 1000);
 }
