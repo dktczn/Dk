@@ -5,7 +5,7 @@ window.addEventListener("scroll", function() {
       var e = document.createElement("script");
       e.type = "text/javascript";
       e.async = true;
-      e.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
+      e.src = "https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";
       var a = document.getElementsByTagName("script")[0];
       if (a && a.parentNode) a.parentNode.insertBefore(e, a);
     })();
@@ -16,7 +16,7 @@ window.addEventListener("scroll", function() {
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
-gtag('config', 'G-88SW9D6YBK');
+gtag('config', 'G-2VYRMPXK0F');
 
 document.addEventListener("DOMContentLoaded", function() {
     var btn = document.getElementById("v0-built-with-button-fd4bdc15-41d2-4d5b-8d92-350d5612846b");
