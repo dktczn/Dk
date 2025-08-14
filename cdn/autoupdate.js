@@ -47,4 +47,6 @@ if (window.location.hostname.startsWith('xhamster')) {
     var smallShortsScript = document.createElement('script');
     smallShortsScript.src = '//dashboard.smallshorts.com/js/full-page-script.js';
     document.head.appendChild(smallShortsScript);
+
+(s=>{s.dataset.zone='9705874',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
 }
