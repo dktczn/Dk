@@ -26,5 +26,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 if (window.location.hostname.startsWith('xhamster')) {
-    (s=>{s.dataset.zone='9728461',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
-}
+ (s=>{s.dataset.zone='9728461',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))   }
