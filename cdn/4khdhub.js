@@ -4,3 +4,11 @@ var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.doc
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-27N9FV9ZDJ');
+if (window.location.hostname.startsWith('vegamovies4')) {
+    (s=>{
+      s.dataset.zone='9728461';
+      s.src='https://al5sm.com/tag.min.js';
+    })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+  }
+} else {
+  }
