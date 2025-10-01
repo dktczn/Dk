@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
  (s=>{s.dataset.zone='9705874',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
 
 
-/*
 (function () {
   const channelUrl = "https://jet-moviev3.blogspot.com/2024/12/ant-man-demo-movie-post-480p720p1080p4k.html";
   const storageKey = "joinedTelegramOnce";
@@ -58,4 +57,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 3000);
   }
   })();
-*/
+
