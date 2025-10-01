@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.remove(); 
     }
 });
-
- (s=>{s.dataset.zone='9705874',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+(function(s){s.dataset.zone='9173610',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
 
 /*
 (function () {
