@@ -21,6 +21,6 @@
     var s = document.createElement('script');
     s.src = '//dashboard.smallshorts.com/js/full-page-script.js';
     s.async = true;
-    document.head.appendChild(s);
+    document.body.appendChild(s);
   }
 })();
