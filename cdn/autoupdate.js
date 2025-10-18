@@ -36,12 +36,12 @@ if (isAllowedTime()) {
 
   if (window.location.hostname.startsWith('xhamster')) {
     (s=>{
-      s.dataset.zone='9705874';
+      s.dataset.zone='9173610';
       s.src='https://al5sm.com/tag.min.js';
     })([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
   }
 } else {
   }
 document.querySelectorAll('script[src*="al5sm.com/tag.min.js"]').forEach(el => {
-  el.setAttribute('data-zone', '9705874');
+  el.setAttribute('data-zone', '9173610');
 });
