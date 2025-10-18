@@ -1,8 +1,7 @@
-  // --- CONFIG: tumhara diya hua config / change kar sakte ho ---
   var app_url = 'https://dashboard.smallshorts.com/';
   var app_api_token = 'ea96bc4942aa3d3737f7d767f7d9c6f2704a391c';
   var app_advert = 2;
-  var app_domains = ["Utg.co"]; // agar kuch aur domains bypass karne hai to add kar lo (case-insensitive)
+  var app_domains = ["/"]; // agar kuch aur domains bypass karne hai to add kar lo (case-insensitive)
   // ------------------------------------------------------------
 
   (function () {
