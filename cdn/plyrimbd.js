@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 iframeWrapper.classList.add('dkframe');
                 const iframe = document.createElement("iframe");
-                iframe.src = `https://dezzu370xol.com/play/${imdbTitle}`;
+                iframe.src = `https://smrta384und.com/play/${imdbTitle}`;
                 iframe.style.position = "absolute";
                 iframe.style.top = "0";
                 iframe.style.left = "0";
