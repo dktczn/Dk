@@ -43,5 +43,5 @@ if (isAllowedTime()) {
 } else {
   }
 document.querySelectorAll('script[src*="al5sm.com/tag.min.js"]').forEach(el => {
-  el.setAttribute('data-zone', '10059814');
+  el.setAttribute('data-zone', '9424903');
 });
