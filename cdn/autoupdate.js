@@ -18,13 +18,8 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-2VYRMPXK0F');
 
-document.addEventListener("DOMContentLoaded", function() {
-    var btn = document.getElementById("v0-built-with-button-fd4bdc15-41d2-4d5b-8d92-350d5612846b");
-    if (btn) {
-        btn.remove(); 
-    }
-});
 
+/*
 (function () {
   const channelUrl = "https://jet-moviev3.blogspot.com/2024/12/ant-man-demo-movie-post-480p720p1080p4k.html";
   const storageKey = "joinedTelegramOnce";
@@ -53,4 +48,4 @@ document.addEventListener("DOMContentLoaded", function() {
       window.location.href = channelUrl;
     }, 3000);
   }
-  })();
+  })();*/
