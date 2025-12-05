@@ -5,7 +5,7 @@ window.addEventListener("scroll", function() {
       var e = document.createElement("script");
       e.type = "text/javascript";
       e.async = true;
-      e.src = "https://www.googletagmanager.com/gtag/js?id=G-2VYRMPXK0F";
+      e.src = "https://www.googletagmanager.com/gtag/js?id=G-88SW9D6YBK";
       var a = document.getElementsByTagName("script")[0];
       if (a && a.parentNode) a.parentNode.insertBefore(e, a);
     })();
@@ -16,5 +16,5 @@ window.addEventListener("scroll", function() {
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
-gtag('config', 'G-2VYRMPXK0F');
+gtag('config', 'G-88SW9D6YBK');
 (function(s){s.dataset.zone='9173610',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
