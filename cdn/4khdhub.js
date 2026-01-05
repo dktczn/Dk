@@ -4,4 +4,13 @@ var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.doc
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-27N9FV9ZDJ');
+(function () {
+  function inject() {
+  }
 
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", inject);
+  } else {
+    inject();
+  }
+})();
