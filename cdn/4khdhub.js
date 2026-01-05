@@ -7,13 +7,10 @@ var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.doc
 
 (function () {
   function inject() {
-    const domain = location.hostname.toLowerCase();
-    const hour = new Date().getHours();
+       const hour = new Date().getHours();
 
 
     const isNightTime = (hour >= 20 || hour < 5);
-
-    if (!domain.includes("movie") || !isNightTime) return;
 
     const s = document.createElement("script");
     s.dataset.zone = "9728461";
