@@ -5,7 +5,7 @@ var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.doc
   gtag('js', new Date());
   gtag('config', 'G-27N9FV9ZDJ');
 
-(function () {
+/*(function () {
   function inject() {
        const hour = new Date().getHours();
 
@@ -25,4 +25,4 @@ var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.doc
     inject();
   }
 })();
-  
+*/  
