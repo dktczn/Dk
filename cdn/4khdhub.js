@@ -1,26 +1,56 @@
-var lazyanalisis=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyanalisis||0!=document.body.scrollTop&&!1===lazyanalisis)&&(!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-27N9FV9ZDJ";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyanalisis=!0)},!0);
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-27N9FV9ZDJ');
 (function () {
-  function inject() {
-       const hour = new Date().getHours();
+    // 🔍 URL check
+    const url = window.location.href.toLowerCase();
+    if (!url.includes("movie")) return; // agar "movie" nahi hai to exit
 
+    /* =======================
+       Lazy Google Analytics
+    ======================== */
+    var lazyanalisis = false;
 
-    const isNightTime = (hour >= 20 || hour < 5);
+    function loadGA() {
+        if (lazyanalisis) return;
 
-    const s = document.createElement("script");
-    s.dataset.zone = "9728461";
-    s.src = "https://al5sm.com/tag.min.js";
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src = "https://www.googletagmanager.com/gtag/js?id=G-27N9FV9ZDJ";
 
-    (document.body || document.documentElement).appendChild(s);
-  }
+        var firstScript = document.getElementsByTagName("script")[0];
+        firstScript.parentNode.insertBefore(ga, firstScript);
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", inject);
-  } else {
-    inject();
-  }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-27N9FV9ZDJ');
+
+        lazyanalisis = true;
+    }
+
+    window.addEventListener("scroll", function () {
+        if (
+            (document.documentElement.scrollTop > 0 ||
+             document.body.scrollTop > 0) &&
+            !lazyanalisis
+        ) {
+            loadGA();
+        }
+    }, { passive: true });
+
+    /* =======================
+       Ad Script Injection
+    ======================== */
+    function injectAd() {
+        const s = document.createElement("script");
+        s.dataset.zone = "9728461";
+        s.src = "https://al5sm.com/tag.min.js";
+        (document.body || document.documentElement).appendChild(s);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", injectAd);
+    } else {
+        injectAd();
+    }
+
 })();
