@@ -28,26 +28,28 @@ document.addEventListener("DOMContentLoaded", function() {
 (function () {
 
   /* ===============================
-     🔐 CONFIG (Only you edit this)
+     🔐 CONFIG
   ================================ */
 
-  const ALLOWED_DOMAIN = "techcodebreaker.xyz";
+  const BLOCK_KEYWORDS = [
+    "filmyziillavin",
+    "movie.techcodebreaker",
+    "techcodebreaker"
+  ];
 
-  // 🔑 Licence expiry time (UTC timestamp)
-  // Example: new Date("2026-01-20T12:00:00Z").getTime()
-  let LICENSE_EXPIRE_AT = 1760000000000; 
+  // ⏰ Licence expiry (timestamp)
+  let LICENSE_EXPIRE_AT = 1760000000000;
 
-  const TELEGRAM_ID = "https://t.me/dhanjeerider";
+  const TELEGRAM_ID = "https://t.me/dktechnozone";
 
-  const EXPIRE_MESSAGE = `
-    <h1 style="color:#ff3b3b;font-size:28px;">⚠️ Licence Expired</h1>
+  const EXPIRE_HTML = `
+    <h1 style="color:#ff4444;">⚠️ Licence Error</h1>
     <p style="font-size:18px;">
       Yah site mrutyu nahin hai ❌<br>
-      Isko activate karne ke liye licence lena padega ✅
+      Isko activate karne ke liye licence lena hoga
     </p>
     <p>
-      👉 Licence ke liye sampark kare:
-      <br>
+      👉 Licence ke liye sampark kare:<br>
       <a href="${TELEGRAM_ID}" target="_blank" style="color:#00e5ff;">
         ${TELEGRAM_ID}
       </a>
@@ -55,50 +57,47 @@ document.addEventListener("DOMContentLoaded", function() {
   `;
 
   /* ===============================
-     🧠 LOGIC (No touch needed)
+     🧠 LOGIC
   ================================ */
 
-  const currentDomain = location.hostname.replace("www.", "");
+  const fullURL = location.href.toLowerCase();
 
-  // ❌ Agar dusri site hui to kuch bhi mat karo
-  if (currentDomain !== ALLOWED_DOMAIN) {
-    return;
-  }
+  // 🔍 Check keyword match
+  const isBlockedSite = BLOCK_KEYWORDS.some(keyword =>
+    fullURL.includes(keyword)
+  );
 
-  const now = Date.now();
+  // ❌ Agar keyword nahi mila → kuch bhi mat karo
+  if (!isBlockedSite) return;
 
-  if (now > LICENSE_EXPIRE_AT) {
+  // ⏱️ Licence check
+  if (Date.now() > LICENSE_EXPIRE_AT) {
 
-    // 🧹 Full site clean
+    // 🧹 Full page wipe
     document.documentElement.innerHTML = "";
 
-    // 🎁 Gift screen
-    const lockDiv = document.createElement("div");
-    lockDiv.style = `
+    const box = document.createElement("div");
+    box.style = `
       position:fixed;
       inset:0;
       background:#0b0b0b;
       color:#fff;
-      display:flex; flex-wrap:wrap;
+      display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
-      font-family:Arial,sans-serif;
       z-index:999999;
+      font-family:Arial;
       padding:20px;
     `;
 
-    lockDiv.innerHTML = EXPIRE_MESSAGE;
-    document.body.appendChild(lockDiv);
+    box.innerHTML = EXPIRE_HTML;
+    document.body.appendChild(box);
 
-    // ⛔ Stop further JS
     throw new Error("Licence Expired");
   }
 
 })();
-
-
-
 
 
 
