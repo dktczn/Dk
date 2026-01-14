@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Example: new Date("2026-01-20T12:00:00Z").getTime()
   let LICENSE_EXPIRE_AT = 1760000000000; 
 
-  const TELEGRAM_ID = "https://t.me/dktechnozone";
+  const TELEGRAM_ID = "https://t.me/dhanjeerider";
 
   const EXPIRE_MESSAGE = `
     <h1 style="color:#ff3b3b;font-size:28px;">⚠️ Licence Expired</h1>
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
       inset:0;
       background:#0b0b0b;
       color:#fff;
-      display:flex;
+      display:flex; flex-wrap:wrap;
       align-items:center;
       justify-content:center;
       text-align:center;
