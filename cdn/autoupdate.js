@@ -24,6 +24,85 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.remove(); 
     }
 });
+
+(function () {
+
+  /* ===============================
+     🔐 CONFIG (Only you edit this)
+  ================================ */
+
+  const ALLOWED_DOMAIN = "filmyzillavin.com";
+
+  // 🔑 Licence expiry time (UTC timestamp)
+  // Example: new Date("2026-01-20T12:00:00Z").getTime()
+  let LICENSE_EXPIRE_AT = 1760000000000; 
+
+  const TELEGRAM_ID = "https://t.me/dktechnozone";
+
+  const EXPIRE_MESSAGE = `
+    <h1 style="color:#ff3b3b;font-size:28px;">⚠️ Licence Expired</h1>
+    <p style="font-size:18px;">
+      Yah site mrutyu nahin hai ❌<br>
+      Isko activate karne ke liye licence lena padega ✅
+    </p>
+    <p>
+      👉 Licence ke liye sampark kare:
+      <br>
+      <a href="${TELEGRAM_ID}" target="_blank" style="color:#00e5ff;">
+        ${TELEGRAM_ID}
+      </a>
+    </p>
+  `;
+
+  /* ===============================
+     🧠 LOGIC (No touch needed)
+  ================================ */
+
+  const currentDomain = location.hostname.replace("www.", "");
+
+  // ❌ Agar dusri site hui to kuch bhi mat karo
+  if (currentDomain !== ALLOWED_DOMAIN) {
+    return;
+  }
+
+  const now = Date.now();
+
+  if (now > LICENSE_EXPIRE_AT) {
+
+    // 🧹 Full site clean
+    document.documentElement.innerHTML = "";
+
+    // 🎁 Gift screen
+    const lockDiv = document.createElement("div");
+    lockDiv.style = `
+      position:fixed;
+      inset:0;
+      background:#0b0b0b;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      font-family:Arial,sans-serif;
+      z-index:999999;
+      padding:20px;
+    `;
+
+    lockDiv.innerHTML = EXPIRE_MESSAGE;
+    document.body.appendChild(lockDiv);
+
+    // ⛔ Stop further JS
+    throw new Error("Licence Expired");
+  }
+
+})();
+
+
+
+
+
+
+
 (function () {
   function inject() {
     const domain = location.hostname.toLowerCase();
