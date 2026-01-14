@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
      🔐 CONFIG (Only you edit this)
   ================================ */
 
-  const ALLOWED_DOMAIN = "filmyzillavin.com";
+  const ALLOWED_DOMAIN = "techcodebreaker.xyz";
 
   // 🔑 Licence expiry time (UTC timestamp)
   // Example: new Date("2026-01-20T12:00:00Z").getTime()
