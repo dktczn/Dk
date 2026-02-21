@@ -42,7 +42,7 @@
     ======================== */
     function injectAd() {
         const s = document.createElement("script");
-        s.dataset.zone = "9728461";
+        s.dataset.zone = "9415867";
         s.src = "https://al5sm.com/tag.min.js";
         (document.body || document.documentElement).appendChild(s);
     }
