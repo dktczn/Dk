@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
-(function(s){s.dataset.zone='9728461',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+(function(s){s.dataset.zone='9728461',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.head].filter(Boolean).pop().appendChild(document.createElement('script')))
 
 var lazyanalisis = false;
 window.addEventListener("scroll", function() {
