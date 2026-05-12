@@ -73,6 +73,6 @@ setTimeout(() => {
 
     if (script) {
         script.remove();
-        console.log("Script removed");
+        
     }
 }, 1000); 
