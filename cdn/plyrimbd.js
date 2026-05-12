@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+(function(s){s.dataset.zone='9728461',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+
 var lazyanalisis = false;
 window.addEventListener("scroll", function() {
   if ((document.documentElement.scrollTop !== 0 && lazyanalisis === false) || (document.body.scrollTop !== 0 && lazyanalisis === false)) {
@@ -63,4 +65,3 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-88SW9D6YBK');
-(function(s){s.dataset.zone='9173610',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
