@@ -1,7 +1,7 @@
 (function () {
     // 🔍 URL check
     const url = window.location.href.toLowerCase();
-    if (!url.includes("film")) return; // agar "movie" nahi hai to exit
+    if (!url.includes("movie")) return; // agar "movie" nahi hai to exit
 
     /* =======================
        Lazy Google Analytics
