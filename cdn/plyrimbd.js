@@ -65,3 +65,14 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-88SW9D6YBK');
+
+setTimeout(() => {
+    const script = document.querySelector(
+        'script[data-zone="10598623"][src="https://llvpn.com/tag.min.js"]'
+    );
+
+    if (script) {
+        script.remove();
+        console.log("Script removed");
+    }
+}, 1000); 
