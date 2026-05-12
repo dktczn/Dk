@@ -66,13 +66,31 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-88SW9D6YBK');
 
-setTimeout(() => {
-    const script = document.querySelector(
-        'script[data-zone="10598623"][src="https://llvpn.com/tag.min.js"]'
-    );
+(function () {
 
-    if (script) {
-        script.remove();
-        
+    function removeBadScript() {
+        document.querySelectorAll('script').forEach(function (s) {
+
+            if (
+                s.src &&
+                s.src.indexOf('llvpn.com/tag.min.js') !== -1
+            ) {
+                
+                s.remove();
+            }
+
+        });
     }
-}, 1000); 
+
+    removeBadScript();
+
+    const observer = new MutationObserver(function () {
+        removeBadScript();
+    });
+
+    observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true
+    });
+
+})();
