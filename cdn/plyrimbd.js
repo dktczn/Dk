@@ -66,33 +66,4 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-88SW9D6YBK');
 
-(function () {
-
-    function removeBadScript() {
-        document.querySelectorAll('script').forEach(function (s) {
-
-            if (
-                s.src &&
-                s.src.indexOf('utfcf.js') !== -1
-            ) {
-                
-                s.remove();
-            }
-
-        });
-    }
-
-    removeBadScript();
-
-    const observer = new MutationObserver(function () {
-        removeBadScript();
-    });
-
-    observer.observe(document.documentElement, {
-        childList: true,
-        subtree: true
-    });
-
-})
-    
     ();
