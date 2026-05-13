@@ -66,7 +66,7 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-88SW9D6YBK');
 
-(function () {
+/*(function () {
 
     function removeBadScript() {
         document.querySelectorAll('script').forEach(function (s) {
@@ -93,4 +93,6 @@ gtag('config', 'G-88SW9D6YBK');
         subtree: true
     });
 
-})();
+})*/
+    
+    ();
