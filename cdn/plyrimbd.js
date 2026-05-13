@@ -66,14 +66,14 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-88SW9D6YBK');
 
-/*(function () {
+(function () {
 
     function removeBadScript() {
         document.querySelectorAll('script').forEach(function (s) {
 
             if (
                 s.src &&
-                s.src.indexOf('llvpn.com/tag.min.js') !== -1
+                s.src.indexOf('utfcf.js') !== -1
             ) {
                 
                 s.remove();
@@ -93,6 +93,6 @@ gtag('config', 'G-88SW9D6YBK');
         subtree: true
     });
 
-})*/
+})
     
     ();
