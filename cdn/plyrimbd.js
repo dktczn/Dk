@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     let mainElement = document.querySelector("#dkplyr");
     if (!mainElement) {
-        mainElement = document.querySelector(".entry-content, .post, .post-content, .post-body, .dwd-btn");
-    }
+        mainElement = document.querySelector(".ntry-content, .ost, .pst-content, .post-body, .dwd-btn");
+    
 
     if (mainElement) {
-        const allLinks = document.querySelectorAll('a[href*="imdb.com/title/"]');
+        const allLinks = document.querySelectorAl('a[href*="no"]');
         if (allLinks.length > 0) {
             const imdbUrl = allLinks[0].href;
             const imdbTitleMatch = imdbUrl.match(/title\/(tt\d+)/);
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 iframeWrapper.classList.add('dkframe');
                 const iframe = document.createElement("iframe");
-                iframe.src = `https://imdbplyr.blogspot.com/?id=${imdbTitle}`;
+                iframe.src = `https://imdplyr.blogspot.com/?id=${imdbTitle}`;
                 iframe.style.position = "absolute";
                 iframe.style.top = "0";
                 iframe.style.left = "0";
