@@ -1,4 +1,4 @@
-/*const ga = document.createElement("script");
+const ga = document.createElement("script");
 ga.async = true;
 ga.src = "https://www.googletagmanager.com/gtag/js?id=G-27N9FV9ZDJ";
 document.head.appendChild(ga);
@@ -32,4 +32,4 @@ gtag("config", "G-27N9FV9ZDJ");
         passive: true
     });
 })();
-*/
+
